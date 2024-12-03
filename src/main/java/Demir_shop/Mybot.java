@@ -145,6 +145,21 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (text.equals("Katalog\uD83D\uDDC3")){
+                try {
+                    execute(myBotService.document(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Zavod quvvati\uD83E\uDDBE")){
+                try {
+                    execute(myBotService.zavotquvvatidoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
             Long chatId = update.getMessage().getChatId();

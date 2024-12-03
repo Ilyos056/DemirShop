@@ -1,9 +1,6 @@
 package Demir_shop;
 
-import org.telegram.telegrambots.meta.api.methods.send.SendLocation;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
-import org.telegram.telegrambots.meta.api.methods.send.SendVideo;
+import org.telegram.telegrambots.meta.api.methods.send.*;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
@@ -370,7 +367,7 @@ public class MyBotService {
     }
 
 
-    public SendVideo video(Long chatId){
+    public SendVideo video(Long chatId)  {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);
         sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
@@ -379,6 +376,30 @@ public class MyBotService {
 
     }
 
+    public SendVideo video2(Long chatId){
+        SendVideo sendVideo = new SendVideo();
+        sendVideo.setChatId(chatId);
+        sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
+
+        return sendVideo;
+
+    }
+
+    public SendDocument document(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\demirshopdocument.pdf")));
+        return sendDocument;
+    }
+
+
+    public SendDocument zavotquvvatidoc(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Мощность завода Demir Profil.pdf")));
+
+        return sendDocument;
+    }
 
 }
 
