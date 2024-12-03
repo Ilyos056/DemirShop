@@ -199,13 +199,17 @@ public class MyBotService {
         button10.setText("Ko`K (5005)");
         row3.add(button10);
 
+        KeyboardButton button11 = new KeyboardButton();
+        button11.setText("Tillocha rang");
+        row3.add(button11);
+        rowList.add(row3);
+
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
 
     }
-
 
 }
 
