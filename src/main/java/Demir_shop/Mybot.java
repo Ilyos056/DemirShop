@@ -98,7 +98,7 @@ public class Mybot extends TelegramLongPollingBot {
 
             if (text.equals("Prays list\uD83D\uDCCB")){
                 try {
-                    execute(myBotService.praysListphoto(chatId));
+                    execute(myBotService.prayslistdoc(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -153,9 +153,66 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
             if (text.equals("Zavod quvvati\uD83E\uDDBE")){
                 try {
                     execute(myBotService.zavotquvvatidoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("\uD83D\uDECDBuyurtma berish")){
+                try {
+                    execute(myBotService.buyurtmaberish(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Profil")){
+                try {
+                    execute(myBotService.profilInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Qo'llanmalar profili")){
+                try {
+                    execute(myBotService.QollanmaprofiliInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Kulonlar (AGRO)")){
+                try {
+                    execute(myBotService.kulonlar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("⬅\uFE0FOrqaga")){
+                try {
+                    execute(myBotService.profilMenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("⬅\uFE0F Orqaga")){
+                try {
+                    execute(myBotService.buyurtmaberish(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("⬅\uFE0F  Orqaga")){
+                try {
+                    execute(myBotService.menu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
