@@ -86,6 +86,80 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+
+            if (text.equals("PROFIL")){
+                try {
+                    execute(myBotService.profilMenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Prays list\uD83D\uDCCB")){
+                try {
+                    execute(myBotService.praysListphoto(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Kontaktlar\uD83D\uDCF1")){
+                try {
+                    execute(myBotService.Kontaktlar(chatId));
+                    execute(myBotService.Kontaktlar2(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Ijtimoiy tarmoq va veb-sayt\uD83C\uDF10")){
+                try {
+                    execute(myBotService.IjtimoiyTarmoq(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Bizning manzil\uD83D\uDDFA")){
+                try {
+                    execute(myBotService.location(chatId));
+                    execute(myBotService.Manzillar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Til tanlash/выбор языка\uD83C\uDF0F")){
+                try {
+                    execute(myBotService.Tiltanlash(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Video\uD83D\uDCF9")){
+                try {
+                    execute(myBotService.video(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Katalog\uD83D\uDDC3")){
+                try {
+                    execute(myBotService.document(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Zavod quvvati\uD83E\uDDBE")){
+                try {
+                    execute(myBotService.zavotquvvatidoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
             Long chatId = update.getMessage().getChatId();
