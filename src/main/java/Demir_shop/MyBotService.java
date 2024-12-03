@@ -1,8 +1,11 @@
 package Demir_shop;
 
+import org.telegram.telegrambots.meta.api.methods.invoices.SendInvoice;
 import org.telegram.telegrambots.meta.api.methods.send.*;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 
@@ -15,7 +18,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n"  + "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "");
+        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n" + "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList = new ArrayList<>();
@@ -46,6 +49,7 @@ public class MyBotService {
 
 
     }
+
     public SendMessage shareContact(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -66,7 +70,8 @@ public class MyBotService {
         return sendMessage;
 
     }
-    public SendMessage menu(Long chatId){
+
+    public SendMessage menu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Menyudan tanlang");
@@ -94,7 +99,8 @@ public class MyBotService {
 
 
     }
-    public SendMessage profnastil(Long chatId){
+
+    public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Profnastil gofrasini tanlang");
@@ -142,13 +148,14 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-    public SendMessage profnastilmenu(Long chatId){
+
+    public SendMessage profnastilmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Profnastil rangini tanlang");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList= new ArrayList<>();
+        List<KeyboardRow> rowList = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
         button.setText("OQ (9016)");
@@ -209,6 +216,14 @@ public class MyBotService {
     }
 
 
+
+
+
+
+
+
+    //Shoxrux
+
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -216,6 +231,12 @@ public class MyBotService {
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList = new ArrayList<>();
+
+        KeyboardRow keyboardRow = new KeyboardRow();
+        KeyboardButton keyboardButton = new KeyboardButton();
+        keyboardButton.setText("\uD83D\uDECDBuyurtma berish");
+        keyboardRow.add(keyboardButton);
+        rowList.add(keyboardRow);
 
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
@@ -268,13 +289,9 @@ public class MyBotService {
 
         KeyboardRow row3 = new KeyboardRow();
         KeyboardButton button9 = new KeyboardButton();
-        button9.setText("⬅\uFE0F Orqaga");
+        button9.setText("⬅\uFE0F  Orqaga");
         row3.add(button9);
         rowList.add(row3);
-
-
-
-
 
 
         replyKeyboardMarkup.setKeyboard(rowList);
@@ -285,21 +302,56 @@ public class MyBotService {
 
     }
 
-    public SendPhoto praysListphoto(Long chatId){
-        SendPhoto sendPhoto = new SendPhoto();
-        sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Screenshots\\demirshop.png")));
-        sendPhoto.setCaption("Export narxlari ro'yxatini olish uchun quyidagi aloqa ma'lumotlariga murojaat qiling:\n" +
+    public SendMessage buyurtmaberish(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Tanlang");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Profil");
+        row.add(button);
+        rowList.add(row);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Qo'llanmalar profili");
+        row.add(button1);
+
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Kulonlar (AGRO)");
+        row.add(button2);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("⬅\uFE0FOrqaga");
+        row1.add(button3);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+    }
+
+    public SendDocument prayslistdoc(Long chatId) {
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\(UZ) Прайс-лист Demir Profil от 25.04.2024 г.pdf")));
+        sendDocument.setCaption("Export narxlari ro'yxatini olish uchun quyidagi aloqa ma'lumotlariga murojaat qiling:\n" +
                 "\n" +
                 "Sotish bo'limi - 998 (88) 224-44-44\n" +
                 "Eksport bo'limi - 998 (95) 250-59-99\n" +
                 "E-mail - info@demir-profil.com");
-
-        return sendPhoto;
+        return sendDocument;
     }
 
-
-    public SendMessage Kontaktlar(Long chatId){
+    public SendMessage Kontaktlar(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("https://t.me/demirprofiluz");
@@ -307,7 +359,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-    public SendMessage Kontaktlar2(Long chatId){
+    public SendMessage Kontaktlar2(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Savdo bo'limi:\n" +
@@ -329,7 +381,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-    public SendMessage IjtimoiyTarmoq(Long chatId){
+    public SendMessage IjtimoiyTarmoq(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Ijtimoiy tarmoq:\n" +
@@ -342,7 +394,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-    public SendLocation location(Long chatId){
+    public SendLocation location(Long chatId) {
         SendLocation sendLocation = new SendLocation();
         sendLocation.setChatId(chatId);
         sendLocation.setLatitude(39.6354094);
@@ -350,7 +402,7 @@ public class MyBotService {
         return sendLocation;
     }
 
-    public SendMessage Manzillar(Long chatId){
+    public SendMessage Manzillar(Long chatId) {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -358,7 +410,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-    public SendMessage Tiltanlash(Long chatId){
+    public SendMessage Tiltanlash(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Версия чат-бота на русском языке – @DemirProfilBot");
@@ -366,8 +418,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-
-    public SendVideo video(Long chatId)  {
+    public SendVideo video(Long chatId) {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);
         sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
@@ -376,7 +427,7 @@ public class MyBotService {
 
     }
 
-    public SendVideo video2(Long chatId){
+    public SendVideo video2(Long chatId) {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);
         sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
@@ -385,20 +436,224 @@ public class MyBotService {
 
     }
 
-    public SendDocument document(Long chatId){
+    public SendDocument document(Long chatId) {
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
         sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\demirshopdocument.pdf")));
         return sendDocument;
     }
 
-
-    public SendDocument zavotquvvatidoc(Long chatId){
+    public SendDocument zavotquvvatidoc(Long chatId) {
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
         sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Мощность завода Demir Profil.pdf")));
 
         return sendDocument;
+    }
+
+    public SendMessage profilInline(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Tanlang :");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("0,25");
+        button.setCallbackData("0,25Id");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0.28");
+        button.setCallbackData("0,28Id");
+        row.add(button);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,30");
+        button.setCallbackData("0,30Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,33");
+        button.setCallbackData("0,33");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,35");
+        button.setCallbackData("0,35Id");
+        row.add(button);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,37");
+        button.setCallbackData("0,37Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,40");
+        button.setCallbackData("0,40");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,45");
+        button.setCallbackData("0,45");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,50");
+        button.setCallbackData("0,50");
+        row.add(button);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,60");
+        button.setCallbackData("0,60");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+
+    }
+
+    public SendMessage QollanmaprofiliInline(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Tanlang :");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("0,25");
+        button.setCallbackData("0,25Id");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0.28");
+        button.setCallbackData("0,28Id");
+        row.add(button);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,30");
+        button.setCallbackData("0,30Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,33");
+        button.setCallbackData("0,33");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,35");
+        button.setCallbackData("0,35Id");
+        row.add(button);
+
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,37");
+        button.setCallbackData("0,37Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,40");
+        button.setCallbackData("0,40");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,45");
+        button.setCallbackData("0,45");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("0,50");
+        button.setCallbackData("0,50");
+        row.add(button);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("0,60");
+        button.setCallbackData("0,60");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+
+    }
+
+    public SendMessage kulonlar(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Tanlang ");
+
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList=new ArrayList<>();
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Bo'yash burchagi");
+        row.add(button);
+        rowList.add(row);
+
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Mayagi");
+        row.add(button1);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("⬅\uFE0F Orqaga");
+        row1.add(button2);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
     }
 
 }
