@@ -13,7 +13,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n"  + "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "");
+        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n" + "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList = new ArrayList<>();
@@ -44,6 +44,7 @@ public class MyBotService {
 
 
     }
+
     public SendMessage shareContact(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -64,7 +65,8 @@ public class MyBotService {
         return sendMessage;
 
     }
-    public SendMessage menu(Long chatId){
+
+    public SendMessage menu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Menyudan tanlang");
@@ -92,7 +94,9 @@ public class MyBotService {
 
 
     }
-    public SendMessage profnastil(Long chatId){
+
+    //PROFNASTIL
+    public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Profnastil gofrasini tanlang");
@@ -140,13 +144,14 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-    public SendMessage profnastilmenu(Long chatId){
+
+    public SendMessage profnastilmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Profnastil rangini tanlang");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList= new ArrayList<>();
+        List<KeyboardRow> rowList = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
         button.setText("OQ (9016)");
@@ -196,7 +201,7 @@ public class MyBotService {
         row3.add(button9);
 
         KeyboardButton button10 = new KeyboardButton();
-        button10.setText("Ko`K (5005)");
+        button10.setText("ATSINKOVKA");
         row3.add(button10);
 
         KeyboardButton button11 = new KeyboardButton();
@@ -211,5 +216,56 @@ public class MyBotService {
 
     }
 
-}
+    //priceprofnastil
+    public SendMessage masterprice(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" Mahsulotingizning qalinligini tanlang ");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("0,3 SMZ 1M = 55 000");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("0,33 SMZ 1M = 59 000");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("0,35 SMZ 1M = 62 000");
+        row1.add(button2);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("0,37 SMZ 1M = 65 000");
+        row1.add(button3);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("0,4 SMZ 1M = 67 000");
+        row2.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("0,45 SMZ 1M = 70 000");
+        row2.add(button5);
+        rowList.add(row2);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+    }
+
+   // public SendMessage atsinkovkaprice(Long chatId){
+     //   SendMessage sendMessage = new SendMessage();
+       // sendMessage.setChatId(chatId);
+        //sendMessage.setText(" Mahsulotingizning qalinligini tanlang");
+// }
+
 
