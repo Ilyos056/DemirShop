@@ -259,8 +259,9 @@ public class MyBotService {
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
-
     }
+    }
+
 
    // public SendMessage atsinkovkaprice(Long chatId){
      //   SendMessage sendMessage = new SendMessage();
