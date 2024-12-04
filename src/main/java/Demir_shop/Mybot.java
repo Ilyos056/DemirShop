@@ -261,6 +261,54 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (text.equals("Стеновой профиль 50*40")){
+                try {
+                    execute(myBotService.buyurtmaberishctena(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой профиль 50*50")){
+                try {
+                    execute(myBotService.buyurtmaberishctena5050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой профиль 75*40")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7540(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой профиль 75*50")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7550(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой профиль 100*40")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10040(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой профиль 100*50")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
             if (text.equals("⬅\uFE0F  Orqaga")){
                 try {
                     execute(myBotService.menu(chatId));
