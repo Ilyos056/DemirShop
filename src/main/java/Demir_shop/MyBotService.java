@@ -49,7 +49,6 @@ public class MyBotService {
 
 
     }
-
     public SendMessage shareContact(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -70,7 +69,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendMessage menu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -99,7 +97,6 @@ public class MyBotService {
 
 
     }
-
     public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -148,7 +145,6 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-
     public SendMessage profnastilmenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -205,7 +201,7 @@ public class MyBotService {
         row3.add(button9);
 
         KeyboardButton button10 = new KeyboardButton();
-        button10.setText("Ko`K (5005)");
+        button10.setText("ATSINKOVKA");
         row3.add(button10);
 
         replyKeyboardMarkup.setKeyboard(rowList);
@@ -214,16 +210,124 @@ public class MyBotService {
         return sendMessage;
 
     }
+    public SendMessage profnastilmasterprice(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Qalinligini tanlang");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("0.30 SMZ 1M = 55 000");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("0.33 SMZ  1M = 58 000");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("0.35 SMZ 1M = 62 000");
+        row.add(button2);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("0.37 SMZ 1M = 65 000 ");
+        row1.add(button3);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("0.40 SMZ 1M = 67 000 ");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("0.45 SMZ 1M = 72 000 ");
+        row1.add(button5);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("0.50 SMZ 1M = 78 000 ");
+        row2.add(button6);
 
 
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("0.60 SMZ 1M = 83 000 ");
+        row2.add(button7);
 
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("Orqaga qaytish");
+        row2.add(button8);
+        rowList.add(row2);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage profnastilatsinkovkaprice(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Qalinligini tanlang");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("0.30 SMZ 1M = 48 000");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("0.33 SMZ  1M = 51 000");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("0.35 SMZ 1M = 53 000");
+        row.add(button2);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("0.37 SMZ 1M = 55 000 ");
+        row1.add(button3);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("0.40 SMZ 1M = 58 000 ");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("0.45 SMZ 1M = 62 000 ");
+        row1.add(button5);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("0.50 SMZ 1M = 67 000 ");
+        row2.add(button6);
+
+
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("0.60 SMZ 1M = 72 000 ");
+        row2.add(button7);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("Orqaga qaytish");
+        row2.add(button8);
+        rowList.add(row2);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
 
 
 
 
 
     //Shoxrux
-
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -301,7 +405,6 @@ public class MyBotService {
 
 
     }
-
     public SendMessage buyurtmaberish(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -338,7 +441,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendDocument prayslistdoc(Long chatId) {
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
@@ -350,7 +452,6 @@ public class MyBotService {
                 "E-mail - info@demir-profil.com");
         return sendDocument;
     }
-
     public SendMessage Kontaktlar(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -358,7 +459,6 @@ public class MyBotService {
 
         return sendMessage;
     }
-
     public SendMessage Kontaktlar2(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -380,7 +480,6 @@ public class MyBotService {
 
         return sendMessage;
     }
-
     public SendMessage IjtimoiyTarmoq(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -393,7 +492,6 @@ public class MyBotService {
 
         return sendMessage;
     }
-
     public SendLocation location(Long chatId) {
         SendLocation sendLocation = new SendLocation();
         sendLocation.setChatId(chatId);
@@ -401,7 +499,6 @@ public class MyBotService {
         sendLocation.setLongitude(66.8741039);
         return sendLocation;
     }
-
     public SendMessage Manzillar(Long chatId) {
 
         SendMessage sendMessage = new SendMessage();
@@ -409,7 +506,6 @@ public class MyBotService {
         sendMessage.setText("O‘zbekiston, Samarqand, Xishrav-2 massivi, “Urgut” erkin iqtisodiy zonasi");
         return sendMessage;
     }
-
     public SendMessage Tiltanlash(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -417,7 +513,6 @@ public class MyBotService {
 
         return sendMessage;
     }
-
     public SendVideo video(Long chatId) {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);
@@ -426,7 +521,6 @@ public class MyBotService {
         return sendVideo;
 
     }
-
     public SendVideo video2(Long chatId) {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);
@@ -435,14 +529,12 @@ public class MyBotService {
         return sendVideo;
 
     }
-
     public SendDocument document(Long chatId) {
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
         sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\demirshopdocument.pdf")));
         return sendDocument;
     }
-
     public SendDocument zavotquvvatidoc(Long chatId) {
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
@@ -450,7 +542,6 @@ public class MyBotService {
 
         return sendDocument;
     }
-
     public SendMessage profilInline(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -536,7 +627,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendMessage QollanmaprofiliInline(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -622,7 +712,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendMessage kulonlar(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -634,7 +723,7 @@ public class MyBotService {
 
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
-        button.setText("Bo'yash burchagi");
+        button.setText("");
         row.add(button);
         rowList.add(row);
 

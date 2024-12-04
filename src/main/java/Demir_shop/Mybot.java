@@ -86,6 +86,70 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("OQ (9016)")){
+                try {
+                    execute(myBotService.profnastilmasterprice(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
 
 
             if (text.equals("PROFIL")){
@@ -95,7 +159,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Prays list\uD83D\uDCCB")){
                 try {
                     execute(myBotService.prayslistdoc(chatId));
@@ -103,7 +166,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Kontaktlar\uD83D\uDCF1")){
                 try {
                     execute(myBotService.Kontaktlar(chatId));
@@ -112,7 +174,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Ijtimoiy tarmoq va veb-sayt\uD83C\uDF10")){
                 try {
                     execute(myBotService.IjtimoiyTarmoq(chatId));
@@ -120,7 +181,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Bizning manzil\uD83D\uDDFA")){
                 try {
                     execute(myBotService.location(chatId));
@@ -129,7 +189,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Til tanlash/выбор языка\uD83C\uDF0F")){
                 try {
                     execute(myBotService.Tiltanlash(chatId));
@@ -137,7 +196,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Video\uD83D\uDCF9")){
                 try {
                     execute(myBotService.video(chatId));
@@ -145,7 +203,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Katalog\uD83D\uDDC3")){
                 try {
                     execute(myBotService.document(chatId));
@@ -153,7 +210,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Zavod quvvati\uD83E\uDDBE")){
                 try {
                     execute(myBotService.zavotquvvatidoc(chatId));
@@ -161,7 +217,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("\uD83D\uDECDBuyurtma berish")){
                 try {
                     execute(myBotService.buyurtmaberish(chatId));
@@ -169,7 +224,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Profil")){
                 try {
                     execute(myBotService.profilInline(chatId));
@@ -177,7 +231,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Qo'llanmalar profili")){
                 try {
                     execute(myBotService.QollanmaprofiliInline(chatId));
@@ -185,7 +238,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Kulonlar (AGRO)")){
                 try {
                     execute(myBotService.kulonlar(chatId));
@@ -193,7 +245,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("⬅\uFE0FOrqaga")){
                 try {
                     execute(myBotService.profilMenu(chatId));
@@ -201,7 +252,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("⬅\uFE0F Orqaga")){
                 try {
                     execute(myBotService.buyurtmaberish(chatId));
@@ -209,7 +259,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("⬅\uFE0F  Orqaga")){
                 try {
                     execute(myBotService.menu(chatId));
