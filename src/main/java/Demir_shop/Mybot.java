@@ -1,6 +1,8 @@
 package Demir_shop;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
+import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -266,6 +268,109 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+        } else if (update.hasCallbackQuery()) {
+            CallbackQuery callbackQuery = update.getCallbackQuery();
+            String data = callbackQuery.getData();
+            Long chatId = callbackQuery.getMessage().getChatId();
+            Integer messageId = callbackQuery.getMessage().getMessageId();
+
+
+            if (data.equals("0,25Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,28Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,30Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,33Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,35Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,37Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,40Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,45Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,50Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,60Id")){
+                try {
+                    execute(myBotService.profilRasmInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+            if (data.equals("-Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
             Long chatId = update.getMessage().getChatId();
