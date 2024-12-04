@@ -323,10 +323,6 @@ public class MyBotService {
         return sendMessage;
     }
 
-
-
-
-
     //Shoxrux
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -744,7 +740,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendPhoto profilRasmInline(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -879,7 +874,5 @@ int i=1;
 
 
     }
-
-
 }
 
