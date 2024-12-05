@@ -409,6 +409,50 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
+            if (data.equals("0,,33Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,,35Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,,37Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,,40Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("0,,45Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("0,335050Id")){
+                try {
+                    execute(myBotService.ctena5050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (data.equals("+Id")){
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
@@ -434,6 +478,57 @@ public class Mybot extends TelegramLongPollingBot {
 
             }
 
+            if (data.equals("qaytishIDdd")){
+                try {
+                    execute(myBotService.buyurtmaberishctena(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytishIDd")){
+                try {
+                    execute(myBotService.buyurtmaberishctena5050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytishIdqollanma")){
+                try {
+                    execute(myBotService.QollanmaprofiliInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("75.40Id")){
+                try {
+                    execute(myBotService.ctena7540(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytish7540Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7540(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("75.50Id")){
+                try {
+                    execute(myBotService.ctena7550(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytish7550Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7550(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
             Long chatId = update.getMessage().getChatId();
