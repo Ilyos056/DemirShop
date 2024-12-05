@@ -828,7 +828,6 @@ int i=1;
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
-
     public InlineKeyboardMarkup profilRasmInlineayrish(Long chatId){
 
         if (i>1){
@@ -876,7 +875,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -932,7 +930,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena5050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -988,7 +985,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena7540(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1044,7 +1040,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena7550(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1100,7 +1095,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena10040(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1156,7 +1150,6 @@ int i=1;
 
 
     }
-
     public SendPhoto buyurtmaberishctena10050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);

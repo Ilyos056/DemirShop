@@ -276,7 +276,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 50*40")){
                 try {
                     execute(myBotService.buyurtmaberishctena(chatId));
@@ -284,7 +283,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 50*50")){
                 try {
                     execute(myBotService.buyurtmaberishctena5050(chatId));
@@ -292,7 +290,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 75*40")){
                 try {
                     execute(myBotService.buyurtmaberishctena7540(chatId));
@@ -300,7 +297,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 75*50")){
                 try {
                     execute(myBotService.buyurtmaberishctena7550(chatId));
@@ -308,7 +304,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 100*40")){
                 try {
                     execute(myBotService.buyurtmaberishctena10040(chatId));
@@ -316,7 +311,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Стеновой профиль 100*50")){
                 try {
                     execute(myBotService.buyurtmaberishctena10050(chatId));
@@ -408,7 +402,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (data.equals("+Id")){
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
@@ -460,6 +453,5 @@ public class Mybot extends TelegramLongPollingBot {
     public String getBotToken() {
         return "7842718204:AAFmwFo5a-7c3El-spMf4xizGBr51vqh-Gw";
     }
-
 
 }
