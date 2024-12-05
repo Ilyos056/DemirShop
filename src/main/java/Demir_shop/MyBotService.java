@@ -88,9 +88,6 @@ public class MyBotService {
         KeyboardButton button2 = new KeyboardButton();
         button2.setText("GIPSOKARTON");
         row.add(button2);
-
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Aksessuarlar");
         rowList.add(row);
 
         replyKeyboardMarkup.setKeyboard(rowList);
@@ -328,204 +325,6 @@ public class MyBotService {
         return sendMessage;
     }
 
-    //aksessuarlar
-    public SendMessage aksessuarlar(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Aksessuarlarni tanlang Tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("Tarnov");
-        row.add(button);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Kanyok");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Tormuz");
-        row.add(button2);
-        rowList.add(row);
-
-        KeyboardRow row1 = new KeyboardRow();
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Kranshteyn");
-        row1.add(button3);
-
-        KeyboardButton button4 = new KeyboardButton();
-        button4.setText("Truba");
-        row1.add(button4);
-
-        KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Samarez");
-        row1.add(button5);
-        rowList.add(row1);
-
-        KeyboardRow row2 = new KeyboardRow();
-        KeyboardButton button6 = new KeyboardButton();
-        button6.setText("Orqaga qaytish");
-        row2.add(button6);
-        rowList.add(row2);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage tarnov(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Tarnovni tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("3/Bo`lakli");
-        row.add(button);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("4/Bo`lakli");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("5/Bo`lakli");
-        row.add(button2);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage kanyok(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Kanyokni tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("Figurni");
-        row.add(button);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Oddiy");
-        row.add(button1);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage tormuz(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Tormuzni tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("4/Bo`lakli");
-        row.add(button);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("5/Bo`lakli");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Pressli");
-        row.add(button2);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage kranshteyn(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Kranshteynni tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("3/Bo`lakli");
-        row.add(button);
-
-        KeyboardRow row1 = new KeyboardRow();
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("4/Bo`lakli");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("5/Bo`lakli");
-        row.add(button2);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage truba(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Trubani tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("6cm X 9cm");
-        row.add(button);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("7cm X 11cm");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Krugli 75");
-        row.add(button2);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-    }
-    public SendMessage samarez(Long chatId){
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Samarezni tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText(" Mexmash(6) 1KG = 42 000 ");
-        row.add(button);
-        rowList.add(row);
-
-        KeyboardButton button1 = new KeyboardButton();
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-
-    }
-
-
-
     //Shoxrux profil
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -628,6 +427,37 @@ public class MyBotService {
         button2.setText("Kulonlar (AGRO)");
         row.add(button2);
 
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Стеновой профиль 50*40");
+        row2.add(button4);
+        rowList.add(row2);
+
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Стеновой профиль 50*50");
+        row2.add(button5);
+
+
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("Стеновой профиль 75*40");
+        row2.add(button6);
+
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("Стеновой профиль 75*50");
+        row3.add(button7);
+        rowList.add(row3);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("Стеновой профиль 100*40");
+        row3.add(button8);
+
+
+        KeyboardButton button9 = new KeyboardButton();
+        button9.setText("Стеновой профиль 100*50");
+        row3.add(button9);
+
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
         button3.setText("⬅\uFE0FOrqaga");
@@ -662,12 +492,17 @@ public class MyBotService {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Savdo bo'limi:\n" +
-                "+998 (93) 992-67-00\n" +
+                "+998 (88) 224-44-44\n" +
                 "\n" +
+                "Eksport bo'limi:\n" +
+                "+ 998 (95) 250-59-99\n" +
                 "\n" +
-                "+998 (93) 723-54-74\n" +
-                "+998 (93) 341-18-21\n" +
-                "+998 (98) 707-67-00\n" +
+                "Mintaqaviy menejerlar:\n" +
+                "+998 (88) 244-99-99\n" +
+                "+998 (93) 722-06-63\n" +
+                "+998 (97) 395-05-04\n" +
+                "+998 (90) 655-45-25\n" +
+                "\n" +
                 "Pochta:\n" +
                 "info@demir-profil.com");
 
@@ -737,9 +572,10 @@ public class MyBotService {
         return sendDocument;
     }
     public SendMessage profilInline(Long chatId){
+
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Tanlang :");
+        sendMessage.setText("Profilni o'lchamini tanlang :");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -917,7 +753,7 @@ public class MyBotService {
 
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
-        button.setText("");
+        button.setText("salom");
         row.add(button);
         rowList.add(row);
 
@@ -975,6 +811,13 @@ public class MyBotService {
         row.add(button);
         rowList.add(row);
 
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIdprofil");
+        row.add(button);
+        rowList.add(row);
+
 
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
@@ -1019,11 +862,19 @@ int i=1;
         row.add(button);
         rowList.add(row);
 
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIDdd");
+        row.add(button);
+        rowList.add(row);
+
 
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
+
     public InlineKeyboardMarkup profilRasmInlineayrish(Long chatId){
 
         if (i>1){
@@ -1065,12 +916,21 @@ int i=1;
         row.add(button);
         rowList.add(row);
 
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIDdd");
+        row.add(button);
+        rowList.add(row);
+
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
 
 
     }
+
     public SendPhoto buyurtmaberishctena(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1083,33 +943,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("0,,33Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("0,,35Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("0,,37Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("0,,40Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("0,,45Id");
         row.add(button);
         rowList.add(row);
 
@@ -1126,6 +986,7 @@ int i=1;
 
 
     }
+
     public SendPhoto buyurtmaberishctena5050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1138,33 +999,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("0,335050Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("0,335050Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("0,335050Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("0,335050Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("0,335050Id");
         row.add(button);
         rowList.add(row);
 
@@ -1181,6 +1042,7 @@ int i=1;
 
 
     }
+
     public SendPhoto buyurtmaberishctena7540(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1193,40 +1055,40 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("75.40Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("75.40Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("75.40Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("75.40Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("75.40Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishId");
+        button.setCallbackData("qaytishd");
         row.add(button);
 
 
@@ -1236,6 +1098,57 @@ int i=1;
 
 
     }
+
+    public SendPhoto ctena7540(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.40.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytish7540Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
     public SendPhoto buyurtmaberishctena7550(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1248,33 +1161,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("75.50Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("75.50Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("75.50Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("75.50Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("75.50Id");
         row.add(button);
         rowList.add(row);
 
@@ -1291,6 +1204,7 @@ int i=1;
 
 
     }
+
     public SendPhoto buyurtmaberishctena10040(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1303,33 +1217,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("100.40Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("100.40Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("100.40Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("100.40Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("100.40Id");
         row.add(button);
         rowList.add(row);
 
@@ -1346,6 +1260,7 @@ int i=1;
 
 
     }
+
     public SendPhoto buyurtmaberishctena10050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1358,33 +1273,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,33Id");
+        button.setCallbackData("100.50Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,35Id");
+        button.setCallbackData("100.50Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,37Id");
+        button.setCallbackData("100.50Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,40Id");
+        button.setCallbackData("100.50Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,45Id");
+        button.setCallbackData("100.50Id");
         row.add(button);
         rowList.add(row);
 
@@ -1401,6 +1316,257 @@ int i=1;
 
 
     }
+
+    public SendPhoto ctena5040033(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.40.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIDdd");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+    public SendPhoto ctena5050(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.50.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIDd");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+    public SendPhoto ctena7550(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.50.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytish7550Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+    public SendPhoto ctena10040(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.40.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytish10040Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+    public SendPhoto ctena10050(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.50.jpg")));
+        sendPhoto.setCaption("Ilyosga");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Savatga qo'shish");
+        button.setCallbackData("savatId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytish10050Id");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+
 
 }
 
