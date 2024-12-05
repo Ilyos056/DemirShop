@@ -97,6 +97,8 @@ public class MyBotService {
 
 
     }
+
+    //profnastil
     public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -323,7 +325,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-    //Shoxrux
+    //Shoxrux profil
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -826,7 +828,6 @@ int i=1;
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return inlineKeyboardMarkup;
     }
-
     public InlineKeyboardMarkup profilRasmInlineayrish(Long chatId){
 
         if (i>1){
