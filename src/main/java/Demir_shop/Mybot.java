@@ -529,6 +529,45 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (data.equals("qaytishIdprofil")){
+                try {
+                    execute(myBotService.profilInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish10040Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10040(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("100.40Id")){
+                try {
+                    execute(myBotService.ctena10040(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("100.50Id")){
+                try {
+                    execute(myBotService.ctena10050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish10050Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
             Long chatId = update.getMessage().getChatId();
