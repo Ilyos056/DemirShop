@@ -32,6 +32,8 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            //profnastil hammasi
             if (text.equals("PROFNASTIL")) {
                 try {
                     execute(myBotService.profnastil(chatId));
@@ -166,8 +168,7 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
-
-
+            //profil hammasi
             if (text.equals("PROFIL")){
                 try {
                     execute(myBotService.profilMenu(chatId));

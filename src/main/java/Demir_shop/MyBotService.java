@@ -97,6 +97,8 @@ public class MyBotService {
 
 
     }
+
+    //profnastil
     public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -323,11 +325,7 @@ public class MyBotService {
         return sendMessage;
     }
 
-
-
-
-
-    //Shoxrux
+    //Shoxrux profil
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -744,7 +742,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
     public SendPhoto profilRasmInline(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -879,7 +876,5 @@ int i=1;
 
 
     }
-
-
 }
 
