@@ -33,6 +33,15 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
+            //aksessuarlar hammasi
+            if (text.equals("Aksessuarlar")){
+                try {
+                    execute(myBotService.aksessuarlar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             //profnastil hammasi
             if (text.equals("PROFNASTIL")) {
                 try {
