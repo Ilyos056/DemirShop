@@ -334,11 +334,47 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("⬅\uFE0FAsosiy | Menu")){
+                try {
+                    execute(myBotService.menu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("GIPSOKARTON")){
+                try {
+                    execute(myBotService.gipsomenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Насьтенавой")){
+                try {
+                    execute(myBotService.nastenavoyInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Потолочный")){
+                try {
+                    execute(myBotService.potolochniyInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
         } else if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
             Long chatId = callbackQuery.getMessage().getChatId();
             Integer messageId = callbackQuery.getMessage().getMessageId();
+
 
 
             if (data.equals("0,25Id")){
@@ -411,6 +447,151 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (data.equals("qaytishIdprofil")){
+                try {
+                    execute(myBotService.profilInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish10040Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10040(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("100.40Id")){
+                try {
+                    execute(myBotService.ctena10040(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("100.50Id")){
+                try {
+                    execute(myBotService.ctena10050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish10050Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena10050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("75.40Id")){
+                try {
+                    execute(myBotService.ctena7540(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("humoId")){
+                try {
+                    execute(myBotService.plastikend(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("uzcardId")){
+                try {
+                    execute(myBotService.plastikend(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("mastercardId")){
+                try {
+                    execute(myBotService.plastikend(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("visaId")){
+                try {
+                    execute(myBotService.plastikend(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("sotibolishId")){
+                try {
+                    execute(myBotService.plastiklar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (data.equals("50.40Id")){
+                try {
+                    execute(myBotService.ctena5040033(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("0,335050Id")){
+                try {
+                    execute(myBotService.ctena5050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("75.50Id")){
+                try {
+                    execute(myBotService.ctena7550(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish5040Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish5050Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena5050(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish7540Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7540(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qaytish7550Id")){
+                try {
+                    execute(myBotService.buyurtmaberishctena7550(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
             if (data.equals("+Id")){
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);

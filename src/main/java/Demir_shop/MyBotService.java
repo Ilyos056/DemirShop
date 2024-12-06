@@ -1,5 +1,6 @@
 package Demir_shop;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.telegram.telegrambots.meta.api.methods.invoices.SendInvoice;
 import org.telegram.telegrambots.meta.api.methods.send.*;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
@@ -780,7 +781,7 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Profilni o'lchamini tanlang :");
+        sendMessage.setText("Profilni qalinligini tanlang :");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -940,6 +941,9 @@ public class MyBotService {
         row.add(button);
         rowList.add(row);
 
+    //Gipsokardon
+
+
 
 
         inlineKeyboardMarkup.setKeyboard(rowList);
@@ -1011,8 +1015,8 @@ public class MyBotService {
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1062,15 +1066,15 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishallId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishIDdd");
+        button.setCallbackData("qoshishall");
         row.add(button);
         rowList.add(row);
 
@@ -1115,8 +1119,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishallId");
         row.add(button);
         rowList.add(row);
 
@@ -1124,7 +1128,7 @@ int i=1;
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishIDdd");
+        button.setCallbackData("qaytishall");
         row.add(button);
         rowList.add(row);
 
@@ -1146,33 +1150,33 @@ int i=1;
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("0,33");
-        button.setCallbackData("0,,33Id");
+        button.setCallbackData("50.40Id");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
         button.setText("0,35");
-        button.setCallbackData("0,,35Id");
+        button.setCallbackData("50.40Id");
         row.add(button);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,37");
-        button.setCallbackData("0,,37Id");
+        button.setCallbackData("50.40Id");
         row.add(button);
         rowList.add(row);
 
 
         button=new InlineKeyboardButton();
         button.setText("0,40");
-        button.setCallbackData("0,,40Id");
+        button.setCallbackData("50.40Id");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("0,45");
-        button.setCallbackData("0,,45Id");
+        button.setCallbackData("50.40Id");
         row.add(button);
         rowList.add(row);
 
@@ -1330,8 +1334,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1544,15 +1548,15 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishIDdd");
+        button.setCallbackData("qaytish5040Id");
         row.add(button);
         rowList.add(row);
 
@@ -1592,8 +1596,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1601,7 +1605,7 @@ int i=1;
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishIDd");
+        button.setCallbackData("qaytish5050Id");
         row.add(button);
         rowList.add(row);
 
@@ -1641,8 +1645,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1690,8 +1694,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1739,8 +1743,8 @@ int i=1;
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Savatga qo'shish");
-        button.setCallbackData("savatId");
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
@@ -1758,5 +1762,254 @@ int i=1;
         return sendPhoto;
     }
 
+    public SendMessage plastiklar(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("To'lov turini tanlang :");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row=new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Humo");
+        button.setCallbackData("humoId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Uzcard");
+        button.setCallbackData("uzcardId");
+        row.add(button);
+        rowList.add(row);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Mastercard");
+        button.setCallbackData("mastercardId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Visa");
+        button.setCallbackData("visaId");
+        row.add(button);
+        rowList.add(row);
+
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(inlineKeyboardMarkup);
+        return sendMessage;
+    }
+
+    public SendMessage plastikend(Long chatId){
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Buyurtmangiz qabul qilindi");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList=new ArrayList<>();
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("⬅\uFE0FAsosiy | Menu");
+        row.add(button);
+        rowList.add(row);
+
+
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setKeyboard(rowList);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+
+
+
+    //Gipsokardon
+   public SendMessage gipsomenu(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Gipsokartonni tanlang :");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList=new ArrayList<>();
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Насьтенавой");
+        row.add(button);
+        rowList.add(row);
+
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Потолочный");
+        row.add(button1);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("⬅\uFE0F  Orqaga");
+        row1.add(button2);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+
+
+    }
+
+   public SendPhoto nastenavoyInline(Long chatId){
+       SendPhoto sendPhoto = new SendPhoto();
+       sendPhoto.setChatId(chatId);
+       sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demirnastenniy.jpg")));
+       sendPhoto.setCaption("Gipsokarton devori 2500/1200 / 12,5 mm\n" +
+               "\n" +
+               "Tavsif\n" +
+               "Gipsokarton devori DEMIR GYPSUM \n" +
+               "\n" +
+               "Hajmi 2500/1200 / 12,5 mm\n" +
+               "\n" +
+               "Har xil turdagi va maqsaddagi gipsokarton bizning qurilish materiallari onlayn -do'koni tomonidan taklif etiladi. Mavjud gipsokarton devori, devor namligiga chidamli, ship, ship namlikka chidamli.\n" +
+               "\n" +
+               "Gipsokartonning afzalliklari:\n" +
+               "\n" +
+               "yengillik;\n" +
+               "\n" +
+               "ekologik toza;\n" +
+               "\n" +
+               "yaxshi ovoz va issiqlik izolyatsiyasi;\n" +
+               "\n" +
+               "qulay narx \n" +
+               "42 000 so'm / dona\n" +
+               "\n" +
+               "Gipsokarton - zamonaviy qurilish materiali bo'lib, uning kuchi, yengilligi va kesish qulayligi tufayli devor qoplamasida, shiftini yopishda, shuningdek, ichki qismlar va boshqa me'moriy elementlarni yaratishda keng qo'llaniladi.\n" +
+               "\n" +
+               "Sayt mahsulotlarning to'liq assortimentini o'z ichiga oladi, shuning uchun sizga kerakli mahsulotni topish oson bo'ladi.\n" +
+               "\n" +
+               "Qo'ng'iroqlar va telefonlar orqali buyurtma:");
+
+
+       InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+       List<InlineKeyboardButton> row=new ArrayList<>();
+       List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+       InlineKeyboardButton button = new InlineKeyboardButton();
+       button.setText("➖");
+       button.setCallbackData("-Id");
+       row.add(button);
+       rowList.add(row);
+
+
+       button=new InlineKeyboardButton();
+       button.setText(String.valueOf(++i));
+       button.setCallbackData("sonId");
+       row.add(button);
+
+
+       button=new InlineKeyboardButton();
+       button.setText("➕");
+       button.setCallbackData("+Id");
+       row.add(button);
+
+
+       row=new ArrayList<>();
+       button=new InlineKeyboardButton();
+       button.setText("Sotib olish");
+       button.setCallbackData("sotibolishId");
+       row.add(button);
+       rowList.add(row);
+
+       row=new ArrayList<>();
+       button=new InlineKeyboardButton();
+       button.setText("⬅\uFE0FQaytish");
+       button.setCallbackData("qaytishgipso");
+       row.add(button);
+       rowList.add(row);
+
+
+       inlineKeyboardMarkup.setKeyboard(rowList);
+       sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+       return sendPhoto;
+   }
+
+   public SendPhoto potolochniyInline(Long chatId){
+       SendPhoto sendPhoto = new SendPhoto();
+       sendPhoto.setChatId(chatId);
+       sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demirpotolochiny.jpg")));
+       sendPhoto.setCaption("Shiftli gipsokarton DEMIR GYPSUM\n" +
+               "\n" +
+               "Qalinligi 9,5 mm\n" +
+               "\n" +
+               "Har xil turdagi va maqsaddagi gipsokarton bizning qurilish materiallari onlayn -do'koni tomonidan taklif etiladi. Mavjud gipsokarton devori, devor namligiga chidamli, ship, ship namlikka chidamli.\n" +
+               "\n" +
+               "Gipsokartonning afzalliklari:\n" +
+               "\n" +
+               "yengillik;\n" +
+               "\n" +
+               "ekologik toza;\n" +
+               "\n" +
+               "yaxshi ovoz va issiqlik izolyatsiyasi;\n" +
+               "\n" +
+               "qulay narx\n" +
+               "32 500 so'm / dona\n" +
+               "Gipsokarton - zamonaviy qurilish materiali bo'lib, uning kuchi, yengilligi va kesish qulayligi tufayli devor qoplamasida, shiftini yopishda, shuningdek, ichki qismlar va boshqa me'moriy elementlarni yaratishda keng qo'llaniladi.\n" +
+               "\n" +
+               "Sayt mahsulotlarning to'liq assortimentini o'z ichiga oladi, shuning uchun sizga kerakli mahsulotni topish oson bo'ladi.\n" +
+               "\n" +
+               "Qo'ng'iroqlar va telefonlar orqali buyurtma:");
+
+
+       InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+       List<InlineKeyboardButton> row=new ArrayList<>();
+       List<List<InlineKeyboardButton>> rowList=new ArrayList<>();
+
+       InlineKeyboardButton button = new InlineKeyboardButton();
+       button.setText("➖");
+       button.setCallbackData("-Id");
+       row.add(button);
+       rowList.add(row);
+
+
+       button=new InlineKeyboardButton();
+       button.setText(String.valueOf(++i));
+       button.setCallbackData("sonId");
+       row.add(button);
+
+
+       button=new InlineKeyboardButton();
+       button.setText("➕");
+       button.setCallbackData("+Id");
+       row.add(button);
+
+
+       row=new ArrayList<>();
+       button=new InlineKeyboardButton();
+       button.setText("Sotib olish");
+       button.setCallbackData("sotibolishId");
+       row.add(button);
+       rowList.add(row);
+
+
+       row=new ArrayList<>();
+       button=new InlineKeyboardButton();
+       button.setText("⬅\uFE0FQaytish");
+       button.setCallbackData("qaytishgipso");
+       row.add(button);
+       rowList.add(row);
+
+
+       inlineKeyboardMarkup.setKeyboard(rowList);
+       sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+       return sendPhoto;
+   }
+
 }
+
 
