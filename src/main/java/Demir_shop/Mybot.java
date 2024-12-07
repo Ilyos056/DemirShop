@@ -9,6 +9,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.util.List;
 
 public class Mybot extends TelegramLongPollingBot {
+    private MybotServiceRU mybotServiceRU=new MybotServiceRU();
     private MyBotService myBotService = new MyBotService();
 
     @Override
@@ -342,6 +343,7 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
+            //Gipsokardon
             if (text.equals("GIPSOKARTON")){
                 try {
                     execute(myBotService.gipsomenu(chatId));
@@ -365,6 +367,140 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //RusTili
+            if (text.equals("Русский язык")){
+                try {
+                    execute(mybotServiceRU.menu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Профиль")){
+                try {
+                    execute(mybotServiceRU.profilMenu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("\uD83D\uDECDСделать заказ")){
+                try {
+                    execute(mybotServiceRU.buyurtmaberish(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Прайс-лист\uD83D\uDCCB")){
+                try {
+                    execute(mybotServiceRU.prayslistdoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Контакты\uD83D\uDCF1")){
+                try {
+                    execute(mybotServiceRU.Kontaktlar(chatId));
+                    execute(mybotServiceRU.Kontaktlar2(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Социальная сеть и сайт\uD83C\uDF10")){
+                try {
+                    execute(mybotServiceRU.IjtimoiyTarmoq(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Видео\uD83D\uDCF9")){
+                try {
+                    execute(mybotServiceRU.video(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Мощность завода\uD83E\uDDBE")){
+                try {
+                    execute(mybotServiceRU.zavotquvvatidoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Наш адрес\uD83D\uDDFA")){
+                try {
+                    execute(mybotServiceRU.location(chatId));
+                    execute(mybotServiceRU.Manzillar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Каталог\uD83D\uDDC3")){
+                try {
+                    execute(mybotServiceRU.document(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Профил")){
+                try {
+                    execute(mybotServiceRU.profilInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Направляющие Профиль")){
+                try {
+                    execute(mybotServiceRU.QollanmaprofiliInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Стеновой  профиль 50*40")){
+                try {
+                    execute(mybotServiceRU.buyurtmaberishctena5040RU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
 
 
 
@@ -616,6 +752,98 @@ public class Mybot extends TelegramLongPollingBot {
                 }
 
             }
+            //RusTilidata
+
+            if (data.equals("0,25RUId")){
+                try {
+                    execute(mybotServiceRU.profilRasmInlineRu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytishIdRUprofil")){
+                try {
+                    execute(mybotServiceRU.QollanmaprofiliInline(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (data.equals("50.40RUId")){
+                try {
+                    execute(mybotServiceRU.ctena5040RU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("qaytish5040RUId")){
+                try {
+                    execute(mybotServiceRU.buyurtmaberishctena5040RU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+            if (data.equals("+RUId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(mybotServiceRU.profilRasmInlineqoshishRU(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("-RUId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(mybotServiceRU.profilRasmInlineayrishRU(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+RU5040Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(mybotServiceRU.profilRasmInlineqoshishRU5040(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-RU5040Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(mybotServiceRU.profilRasmInlineayrishRU0540(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
 
         }
         if (update.hasMessage() && update.getMessage().hasContact()){
