@@ -103,7 +103,7 @@ public class MyBotService {
         row1.add(button4);
 
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Ustolar Ro'yxati");
+        button5.setText("Ustalar Ro'yxati");
         row1.add(button5);
 
         KeyboardRow row2 = new KeyboardRow();

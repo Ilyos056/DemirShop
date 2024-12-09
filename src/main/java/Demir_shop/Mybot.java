@@ -1,22 +1,53 @@
 package Demir_shop;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Mybot extends TelegramLongPollingBot {
     private MybotServiceRU mybotServiceRU=new MybotServiceRU();
     private MyBotService myBotService = new MyBotService();
 
+    private Map<Long, String> userState=new HashMap<>();
+    private Map<String, String > userInfo=new HashMap<>();
+
     @Override
     public void onUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
+        if (update.hasMessage() && update.getMessage().hasText())  {
             Long chatId = update.getMessage().getChatId();
             String text = update.getMessage().getText();
+
+            switch (userState.getOrDefault(chatId,"Comment")){
+                case "Comment" :
+                    sendmessage(chatId, "Ismingizni kiriting");
+                    userState.put(chatId,"Familiya");
+                    break;
+                case "Familiya" :
+                    userInfo.put(chatId + "Ism" , text);
+                    sendmessage(chatId, "Familiyangizni kiriting");
+                    userState.put(chatId, "Phone");
+                    break;
+                case "Phone" :
+                    userInfo.put(chatId +"Familiya", text);
+                    sendmessage(chatId , "Telefon raqamingizni kiriting");
+                    userState.put(chatId,"finish");
+                    break;
+                case "finish" :
+                    userInfo.put(chatId + "Phone" , text);
+                    sendmessage(chatId,"Raxmat ! Malumotlaringiz saqlandi");
+                    System.out.println("Ism :" + userInfo.get(chatId+"Ism"));
+                    System.out.println("Familiya :"+ userInfo.get(chatId+"Familiya"));
+                    System.out.println("Phone :" +userInfo.get(chatId+"Phone"));
+                    userState.remove(chatId);
+
+            }
 
 
             if (text.equals("/start")) {
@@ -1317,7 +1348,16 @@ public class Mybot extends TelegramLongPollingBot {
 
     }
 
-
+private void sendmessage(Long chatId, String text){
+    SendMessage sendMessage = new SendMessage();
+    sendMessage.setChatId(chatId.toString());
+    sendMessage.setText(text);
+    try {
+        execute(sendMessage);
+    } catch (TelegramApiException e) {
+        throw new RuntimeException(e);
+    }
+}
 
 
 
