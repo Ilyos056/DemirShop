@@ -1,5 +1,6 @@
 package Demir_shop;
 
+import com.fasterxml.jackson.core.JsonEncoding;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.telegram.telegrambots.meta.api.methods.invoices.SendInvoice;
 import org.telegram.telegrambots.meta.api.methods.send.*;
@@ -97,20 +98,174 @@ public class MyBotService {
         row1.add(button3);
         rowList.add(row1);
 
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Bizning manzillar");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Ustolar Ro'yxati");
+        row1.add(button5);
+
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
+    }
 
+    //Ustalar ro`yxati
+    public SendMessage ustalar(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("O`zingizga kerakli ustani tanlang");
 
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Tom usti");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Patalochni");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Orqaga");
+        row1.add(button2);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage ustalartom(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Tanlang");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
     }
 
 
+    //lakatsiyalar
+    public SendMessage manzillar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Manzilni tanlang");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardButton button = new KeyboardButton();
+        KeyboardRow row = new KeyboardRow();
+        button.setText("1-Shaxobcha");
+        row.add(button);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("2-Shaxobcha");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("3-Shaxobcha");
+        row1.add(button2);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Orqaga");
+        row1.add(button3);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendLocation firstlakatsiya(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.597569);
+        sendLocation.setLongitude(66.929696);
+        return sendLocation;
+
+    }
+    public SendMessage firstmessage(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 1-Filial" +
+                "                     \n" +
+                "\uD83D\uDDFA Manzil: Тахта бозор, Samarkand, Samarqand Region, Uzbekistan \n" +
+                "                     \n" +
+                "\uD83C\uDFE2 Orientir: Humo Med ro`parasida \n" +
+                "                     \n" +
+                "☎\uFE0F Telefon raqami:  +998939926700\n" +
+                "☎\uFE0F Telefon raqami:  +998987076700\n" +
+                "\uD83D\uDD59 Ish vaqti : 7:00 - 20:00");
+        return sendMessage;
+    }
+    public SendLocation secondlakatsiya(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.5991705);
+        sendLocation.setLongitude(66.9356548);
+        return sendLocation;
+
+    }
+    public SendMessage secondmessage(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 2-Filial" +
+                "                     \n" +
+                "\uD83D\uDDFA Manzil: Тахта бозор, Samarkand, Samarqand Region, Uzbekistan \n" +
+                "                     \n" +
+                "\uD83C\uDFE2 Orientir: Yangi hayot ko`chasi \n" +
+                "                     \n" +
+                "☎\uFE0F Telefon raqami:  +998982732101\n" +
+                "☎\uFE0F Telefon raqami:  +998902713131\n" +
+                "\uD83D\uDD59 Ish vaqti : 7:00 - 20:00");
+        return sendMessage;
+    }
+    public SendLocation thirdlakatsiya(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.598700);
+        sendLocation.setLongitude(66.936107);
+        return sendLocation;
+
+    }
+    public SendMessage thirdmessage(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 3-Filial" +
+                "                     \n" +
+                "\uD83D\uDDFA Manzil: Тахта бозор, Samarkand, Samarqand Region, Uzbekistan \n" +
+                "                     \n" +
+                "\uD83C\uDFE2 Orientir: Taxta Bozor ro`parasida \n" +
+                "                     \n" +
+                "☎\uFE0F Telefon raqami:  +998982791999\n" +
+                "☎\uFE0F Telefon raqami:  +9989\n" +
+                "\uD83D\uDD59 Ish vaqti : 7:00 - 20:00");
+        return sendMessage;
+    }
 
     //profnastil
     public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
         sendMessage.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
+        sendPhoto.setCaption("Profnastil gofrasini tanlang");
         sendMessage.setText("Profnastil gofrasini tanlang");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
@@ -277,7 +432,7 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-    public SendMessage profnastilatsinkovkaprice(Long chatId){
+    public SendMessage profnastilatsinkovkaprice(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Qalinligini tanlang");
@@ -522,6 +677,7 @@ public class MyBotService {
         rowList.add(row);
 
         KeyboardButton button1 = new KeyboardButton();
+        button1.setText(" ");
 
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -529,7 +685,6 @@ public class MyBotService {
         return sendMessage;
 
     }
-
 
     //Shoxrux profil
     public SendMessage profilMenu(Long chatId) {
@@ -1761,7 +1916,6 @@ int i=1;
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
-
     public SendMessage plastiklar(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -1805,7 +1959,6 @@ int i=1;
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-
     public SendMessage plastikend(Long chatId){
 
         SendMessage sendMessage = new SendMessage();
@@ -1828,9 +1981,7 @@ int i=1;
         return sendMessage;
     }
 
-
-
-    //Gipsokardon
+    //Gipsokarton
    public SendMessage gipsomenu(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -1864,8 +2015,7 @@ int i=1;
 
 
     }
-
-   public SendPhoto nastenavoyInline(Long chatId){
+    public SendPhoto nastenavoyInline(Long chatId){
        SendPhoto sendPhoto = new SendPhoto();
        sendPhoto.setChatId(chatId);
        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demirnastenniy.jpg")));
@@ -1938,7 +2088,6 @@ int i=1;
        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
        return sendPhoto;
    }
-
    public SendPhoto potolochniyInline(Long chatId){
        SendPhoto sendPhoto = new SendPhoto();
        sendPhoto.setChatId(chatId);
