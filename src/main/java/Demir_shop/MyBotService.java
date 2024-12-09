@@ -106,6 +106,12 @@ public class MyBotService {
         button5.setText("Ustolar Ro'yxati");
         row1.add(button5);
 
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("Comment");
+        row2.add(button6);
+        rowList.add(row2);
+
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
@@ -129,6 +135,10 @@ public class MyBotService {
         button1.setText("Patalochni");
         row.add(button1);
         rowList.add(row);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Gipsokartonchi");
+        row.add(button3);
 
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button2 = new KeyboardButton();
@@ -422,7 +432,7 @@ public class MyBotService {
         row2.add(button7);
 
         KeyboardButton button8 = new KeyboardButton();
-        button8.setText("Orqaga qaytish");
+        button8.setText("Orqaga");
         row2.add(button8);
         rowList.add(row2);
 
@@ -1982,7 +1992,7 @@ int i=1;
     }
 
     //Gipsokarton
-   public SendMessage gipsomenu(Long chatId){
+    public SendMessage gipsomenu(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("Gipsokartonni tanlang :");
@@ -2088,7 +2098,7 @@ int i=1;
        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
        return sendPhoto;
    }
-   public SendPhoto potolochniyInline(Long chatId){
+    public SendPhoto potolochniyInline(Long chatId){
        SendPhoto sendPhoto = new SendPhoto();
        sendPhoto.setChatId(chatId);
        sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demirpotolochiny.jpg")));
