@@ -2123,6 +2123,8 @@ public class MybotServiceRU{
 
     }
 
+
+
     public SendPhoto potolochniyInlineRU(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
