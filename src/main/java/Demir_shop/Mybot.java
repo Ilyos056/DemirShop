@@ -123,6 +123,7 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
             //lakatsiyalar
             if (text.equals("Bizning manzillar")){
                 try {
@@ -213,9 +214,9 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("ORQAGA")){
+            if (text.equals("Oq (9003)")){
                 try {
-                    execute(myBotService.menu(chatId));
+                    execute(myBotService.profnastilmasterprice(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -297,6 +298,123 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            //master profnastil
+            if (text.equals("0.30 SMZ 1M = 55 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.33 SMZ  1M = 58 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.35 SMZ  1M = 62 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.37 SMZ  1M = 65 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.40 SMZ  1M = 67 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.45 SMZ  1M = 72 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.50 SMZ  1M = 78 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.60 SMZ  1M = 83 000")){
+                try {
+                    execute(myBotService.profnastilinlineMaster(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            //atsinkovka profnastil
+            if (text.equals("0.30 SMZ 1M = 48 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.33 SMZ 1M = 51 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.35 SMZ 1M = 53 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.37 SMZ 1M = 55 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.40 SMZ 1M = 58 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.45 SMZ 1M = 62 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.50 SMZ 1M = 67 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("0.60 SMZ 1M = 72 000")){
+                try {
+                    execute(myBotService.profnastilinlineAtsinkovka(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
 
             //profil hammasi
             if (text.equals("PROFIL")){
@@ -471,7 +589,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Насьтенавой")){
                 try {
                     execute(myBotService.nastenavoyInline(chatId));
@@ -479,7 +596,6 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
             if (text.equals("Потолочный")){
                 try {
                     execute(myBotService.potolochniyInline(chatId));
@@ -1358,6 +1474,18 @@ private void sendmessage(Long chatId, String text){
         throw new RuntimeException(e);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
