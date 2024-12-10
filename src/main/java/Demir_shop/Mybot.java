@@ -1,5 +1,6 @@
 package Demir_shop;
 
+import org.dom4j.CDATA;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
@@ -24,30 +25,23 @@ public class Mybot extends TelegramLongPollingBot {
             Long chatId = update.getMessage().getChatId();
             String text = update.getMessage().getText();
 
-            switch (userState.getOrDefault(chatId,"Comment")){
-                case "Comment" :
-                    sendmessage(chatId, "Ismingizni kiriting");
-                    userState.put(chatId,"Familiya");
-                    break;
-                case "Familiya" :
-                    userInfo.put(chatId + "Ism" , text);
-                    sendmessage(chatId, "Familiyangizni kiriting");
-                    userState.put(chatId, "Phone");
-                    break;
-                case "Phone" :
-                    userInfo.put(chatId +"Familiya", text);
-                    sendmessage(chatId , "Telefon raqamingizni kiriting");
-                    userState.put(chatId,"finish");
-                    break;
-                case "finish" :
-                    userInfo.put(chatId + "Phone" , text);
-                    sendmessage(chatId,"Raxmat ! Malumotlaringiz saqlandi");
-                    System.out.println("Ism :" + userInfo.get(chatId+"Ism"));
-                    System.out.println("Familiya :"+ userInfo.get(chatId+"Familiya"));
-                    System.out.println("Phone :" +userInfo.get(chatId+"Phone"));
-                    userState.remove(chatId);
+            if (text.startsWith("Comment")) {
+                String state = userState.getOrDefault(chatId, "Comment");
 
+                if (state.equals("Comment")) {
+                    sendmessage(chatId, "Izoh qoldiring:");
+                    userState.put(chatId, "finish");
+                }
+            } else if (userState.containsKey(chatId) && userState.get(chatId).equals("finish")) {
+                userInfo.put(chatId + "Comment", text);
+                sendmessage(chatId, "Rahmat! Izohingiz saqlandi.");
+                System.out.println("Comment: " + userInfo.get(chatId + "Comment"));
+                userState.remove(chatId);
+            } else {
+                System.out.println("Xatolik sodir boldi");
             }
+
+
 
 
             if (text.equals("/start")) {
@@ -496,7 +490,7 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("Napravlayushi profili")){
+            if (text.equals("Qo'llanmalar profili")){
                 try {
                     execute(myBotService.QollanmaprofiliInline(chatId));
                 } catch (TelegramApiException e) {
@@ -840,6 +834,22 @@ public class Mybot extends TelegramLongPollingBot {
             Long chatId = callbackQuery.getMessage().getChatId();
             Integer messageId = callbackQuery.getMessage().getMessageId();
 
+            if (data.startsWith("humoId")) {
+                String state = userState.getOrDefault(chatId, "humoId");
+
+                if (state.equals("humoId")) {
+                    sendmessage(chatId, "Kartangizni kiriting :");
+                    userState.put(chatId, "finish");
+                }
+            } else if (userState.containsKey(chatId) && userState.get(chatId).equals("finish")) {
+                userInfo.put(chatId + "humoId", data);
+                sendmessage(chatId, "Demir shop botidan xarid qilganingiz uchun Raxmat ! ! ! ");
+                System.out.println("humoId:" + userInfo.get(chatId + "humoId"));
+                userState.remove(chatId);
+            } else {
+                System.out.println("Xatolik sodir boldi");
+            }
+
 
 
             if (data.equals("0,25Id")){
@@ -960,13 +970,13 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
-            if (data.equals("humoId")){
-                try {
-                    execute(myBotService.plastikend(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+//            if (data.equals("humoId")){
+//                try {
+//                    execute(myBotService.plastikend(chatId));
+//                } catch (TelegramApiException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
 
             if (data.equals("uzcardId")){
                 try {
@@ -1088,6 +1098,208 @@ public class Mybot extends TelegramLongPollingBot {
                 }
 
             }
+
+
+            if (data.equals("+prId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshishprofil(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+            if (data.equals("-prId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrishprofil(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+
+
+
+
+            if (data.equals("+5050Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish5050(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-5050Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish5050(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+7540Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish7540(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-7540Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish7540(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+7550Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish7550(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-7550Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish7550(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+10040Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish10040(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-10040Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish10040(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+10050Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineqoshish10050(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-10050Id")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.profilRasmInlineayrish10050(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            //gipsoUZ
+
+            if (data.equals("+GipsoId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.GipsoRasmInlineqoshishUZ(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-GipsoId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.GipsoRasmInlineayrishUZ(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("+potoId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.GipsoRasmInlineqoshishUZpoto(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("-potoId")){
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+                editMessageReplyMarkup.setReplyMarkup(myBotService.GipsoRasmInlineayrishUZpoto(chatId));
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
             //RusTilidata
 
             if (data.equals("0,25RUId")){
@@ -1244,6 +1456,10 @@ public class Mybot extends TelegramLongPollingBot {
 
 
 
+
+
+
+            //Rustili inline
             if (data.equals("+RUprofilId")){
                 EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
                 editMessageReplyMarkup.setChatId(chatId);
