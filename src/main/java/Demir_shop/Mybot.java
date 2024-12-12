@@ -1703,9 +1703,6 @@ private void sendmessage(Long chatId, String text){
 
 
 
-
-
-
     @Override
     public String getBotUsername() {
         return "Demirshop_bot";

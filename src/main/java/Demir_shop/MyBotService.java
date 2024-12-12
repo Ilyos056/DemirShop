@@ -94,7 +94,7 @@ public class MyBotService {
         row1.add(button2);
 
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Aksessuarlar");
+        button3.setText("Calculator");
         row1.add(button3);
         rowList.add(row1);
 
