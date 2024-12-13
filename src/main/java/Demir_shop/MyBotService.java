@@ -20,7 +20,9 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n" + "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "");
+        sendMessage.setText("Asalomu aleykum! DEMIR_shop Telegramm botiga Xush kelibsiz\n" +
+                "Здравствуйте!!! DEMIR_shop Добро пожаловать в Telegram-бот\n" + "" +
+                "Peace be upon you! Welcome to DEMIR_shop Telegram bot");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList = new ArrayList<>();
@@ -39,10 +41,6 @@ public class MyBotService {
         KeyboardButton button2 = new KeyboardButton();
         button2.setText("English language");
         row.add(button2);
-
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Қазақ тілі");
-        row.add(button3);
 
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -94,7 +92,7 @@ public class MyBotService {
         row1.add(button2);
 
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Calculator");
+        button3.setText("Kalkulyator");
         row1.add(button3);
         rowList.add(row1);
 
@@ -108,7 +106,7 @@ public class MyBotService {
 
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button6 = new KeyboardButton();
-        button6.setText("Comment");
+        button6.setText("\uD83D\uDCAC Izoh qoldirish");
         row2.add(button6);
         rowList.add(row2);
 
@@ -2040,7 +2038,7 @@ public class MyBotService {
         sendPhoto.setCaption("Profil CW 75/50 - gipskarton konstruktsiyalari uchun raft profilidir. \n " +
                 " UW 75/40 tipidagi profillar o'rtasida 60 sm qadam bilan vertikal ravishda biriktirilgan CW 75/50 profili gipskarton qismlari uchun mo'ljallangan vertikal ramka ustunlari uchun ishlatiladi. \n" +
                 " Raf profili CW 75/50 mos keladigan hidoyat profili UW 75/40 bilan juftlikda ishlatiladi. \n" +
-                "Narxi: 2,34 ");
+                "Narxi: 2,34$ ");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -2710,7 +2708,8 @@ public class MyBotService {
 
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Buyurtmangiz qabul qilindi");
+        sendMessage.setText("Buyurtmangiz qabul qilindi \n" +
+                " Operatorimiz siz bilan bog'lanadi");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList=new ArrayList<>();
@@ -2727,6 +2726,7 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
 
 
     //Gipsokarton
@@ -2801,20 +2801,20 @@ public class MyBotService {
 
        InlineKeyboardButton button = new InlineKeyboardButton();
        button.setText("➖");
-       button.setCallbackData("-GipsoId");
+       button.setCallbackData("-GipsoUzId");
        row.add(button);
        rowList.add(row);
 
 
        button=new InlineKeyboardButton();
-       button.setText(String.valueOf(++i));
+       button.setText("1");
        button.setCallbackData("sonId");
        row.add(button);
 
 
        button=new InlineKeyboardButton();
        button.setText("➕");
-       button.setCallbackData("+GipsoId");
+       button.setCallbackData("+GipsoUzId");
        row.add(button);
 
 
@@ -2845,7 +2845,7 @@ public class MyBotService {
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("➖");
-        button.setCallbackData("-GipsoId");
+        button.setCallbackData("-GipsoUzId");
         row.add(button);
         rowList.add(row);
 
@@ -2858,7 +2858,7 @@ public class MyBotService {
 
         button=new InlineKeyboardButton();
         button.setText("➕");
-        button.setCallbackData("+GipsoId");
+        button.setCallbackData("+GipsoUzId");
         row.add(button);
 
 
@@ -2891,7 +2891,7 @@ public class MyBotService {
 
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("➖");
-        button.setCallbackData("-GipsoId");
+        button.setCallbackData("-GipsoUzId");
         row.add(button);
         rowList.add(row);
 
@@ -2904,7 +2904,7 @@ public class MyBotService {
 
         button=new InlineKeyboardButton();
         button.setText("➕");
-        button.setCallbackData("+GipsoId");
+        button.setCallbackData("+GipsoUzId");
         row.add(button);
 
 
@@ -2963,7 +2963,7 @@ public class MyBotService {
 
 
        button=new InlineKeyboardButton();
-       button.setText(String.valueOf(++i));
+       button.setText("1");
        button.setCallbackData("sonId");
        row.add(button);
 
@@ -3081,5 +3081,7 @@ public class MyBotService {
 
 
 }
+
+
 
 

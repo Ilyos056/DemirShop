@@ -643,7 +643,10 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.40.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Направляющий профиль Demir Profil 50*40 используется в качестве направляющего для стоечного профиля 50*50 при монтаже гипсокартонных изделий или настенных покрытий.\n" +
+                " Его также используют для установки перемычек между ними. Направляющий профиль ПН 50*50 в основном выполняет вспомогательные функции и является частью каркаса.\n" +
+                " Иногда его используют как основу для скрепления листов.\n" +
+                "цена: 1,96$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -693,7 +696,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.40.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель :магазин Демир  \n" +
+                "Вес 1 кг/шт.\n" +
+                "Длина 3 м; 4 м;\n" +
+                "Покрытие цинк");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -808,7 +815,7 @@ public class MybotServiceRU{
 
 
         button=new InlineKeyboardButton();
-        button.setText(String.valueOf(t));
+        button.setText(String.valueOf(a));
         button.setCallbackData("sonId");
         row.add(button);
 
@@ -846,7 +853,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.50.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Демир профиль 50 х 50 применяется для монтажа деталей из гипсокартонных листов, а также его применяют при возведении фальш-стен.\n" +
+                "С помощью этого материала можно качественно, быстро и грамотно построить перегородку в квартире, частном доме и офисе.\n" +
+                "Профиль длиной 4 метра используется для высоких потолков, если обойтись без соединителей.\n" +
+                "\n" +
+                "Цена: 4,38$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -896,7 +907,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir50.50.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель: магазин Демир\n" +
+                "Ширина: 50 мм\n" +
+                "Высота: 50 мм\n" +
+                "Длина: 4 м");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1051,7 +1066,10 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.40.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Описание Направляющий профиль 75 х 40, предназначен для монтажа гипсокартонных листов,\n" +
+                " Его также используют при возведении фальш-стен.\n" +
+                " С помощью этого материала можно качественно, быстро и грамотно построить перегородку в квартире, частном доме и офисе.\n" +
+                "Цена: 3,10$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1101,7 +1119,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.40.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель: магазин Демир\n" +
+                "Ширина 75 мм.\n" +
+                "Высота 40 мм\n" +
+                "Длина 3 м");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1254,7 +1276,10 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.50.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Профиль CW 75/50 – стропильный профиль для гипсокартонных конструкций.\n" +
+                " Профиль CW 75/50, вертикально прикрепленный с шагом 60 см между профилями типа UW 75/40, применяется для вертикальных колонн каркаса, предназначенных для гипсокартонных деталей.\n" +
+                " Полочный профиль CW 75/50 используется в паре с соответствующим направляющим профилем UW 75/40.\n" +
+                "Цена: 2,34$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1305,7 +1330,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir75.50.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель: магазин Демир\n" +
+                "Тип: 75 х 50 мм\n" +
+                "Материал: сталь\n" +
+                "Длина: 3 м");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1459,7 +1488,9 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.40.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Описание Профиль 100*40, длина 3,0 м, толщина от 0,4 до 0,7 мм, из оцинкованного металла. Используется в качестве основы для стоечных профилей, а также\n" +
+                " используется для установки перемычек между секциями и крышками в рамах. \n" +
+                "Цена: 5,31$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1510,7 +1541,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.40.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель: магазин Демир\n" +
+                "Вес, кг: 2,5\n" +
+                "Длина, мм: 3000\n" +
+                "Ширина, мм: 100");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1663,7 +1698,10 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.50.jpg")));
-        sendPhoto.setCaption("Ozingiz malumotlarni kiriting Ilyos");
+        sendPhoto.setCaption("Стоечный профиль 100 х 50 используется для монтажа кусков гипсокартона, а также для возведения фальш-стен.\n" +
+                " С помощью этого материала вы сможете использовать качественные,\n" +
+                " вы можете построить быстрое и компетентное подразделение.\n" +
+                "Цена: 6,31$");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -1714,7 +1752,11 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile(new File("C:\\Users\\hp\\Pictures\\Saved Pictures\\demir100.50.jpg")));
-        sendPhoto.setCaption("Ilyosga");
+        sendPhoto.setCaption("Технические характеристики:\n" +
+                "Производитель: магазин Демир\n" +
+                "Ширина: 100 мм.\n" +
+                "Высота: 50 мм\n" +
+                "Длина: 4 м");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row=new ArrayList<>();
@@ -2011,7 +2053,7 @@ public class MybotServiceRU{
 
 
         button=new InlineKeyboardButton();
-        button.setText(String.valueOf(++b));
+        button.setText("1");
         button.setCallbackData("sonId");
         row.add(button);
 
@@ -2164,7 +2206,7 @@ public class MybotServiceRU{
 
 
         button=new InlineKeyboardButton();
-        button.setText(String.valueOf(++b));
+        button.setText("1");
         button.setCallbackData("sonId");
         row.add(button);
 
