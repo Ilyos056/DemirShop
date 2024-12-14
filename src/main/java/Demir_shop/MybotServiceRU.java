@@ -37,10 +37,24 @@ public class MybotServiceRU{
         row1.add(button2);
 
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Аксессуары");
+        button3.setText("Калькулятор");
         row1.add(button3);
         rowList.add(row1);
 
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Наши адреса");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Список мастеров");
+        row1.add(button5);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("\uD83D\uDCAC Оставить комментарий");
+        row2.add(button6);
+        rowList.add(row2);
+
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
@@ -48,27 +62,6 @@ public class MybotServiceRU{
 
 
     }
-    public SendMessage shareContactRU(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Отправьте свой номер телефона для регистрации");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("Поделиться Контакты");
-        button.setRequestContact(true);
-        row.add(button);
-        rowList.add(row);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-
-    }
-
     public SendMessage profilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -1931,14 +1924,14 @@ public class MybotServiceRU{
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("Mastercard");
-        button.setCallbackData("mastercardId");
+        button.setCallbackData("mastercardRUId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("Visa");
-        button.setCallbackData("visaId");
+        button.setCallbackData("visaRUId");
         row.add(button);
         rowList.add(row);
 

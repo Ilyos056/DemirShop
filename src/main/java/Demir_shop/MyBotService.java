@@ -1068,6 +1068,27 @@ public class MyBotService {
         return sendMessage;
 
     }
+    public SendLocation sotibolishLoc(Long chatId){
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Manzilingizni jo'nating ");
+        button.setRequestLocation(true);
+        row.add(button);
+        rowList.add(row);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendLocation.setReplyMarkup(replyKeyboardMarkup);
+        return sendLocation;
+
+    }
 
 
     public SendMessage profilInline(Long chatId){
