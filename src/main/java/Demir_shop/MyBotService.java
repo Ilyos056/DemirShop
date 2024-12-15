@@ -134,10 +134,6 @@ public class MyBotService {
         row.add(button1);
         rowList.add(row);
 
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Gipsokartonchi");
-        row.add(button3);
-
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button2 = new KeyboardButton();
         button2.setText("Orqaga");
@@ -149,21 +145,79 @@ public class MyBotService {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-    public SendMessage ustalartom(Long chatId){
+    public SendMessage tom(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
-        sendMessage.setText("Tanlang");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Bobur  " +
+                "              Ish turi: Tom yopish" +
+                "             \uD83D\uDCF1 Telefon raqami: +998 99 944 22 23 ");
         return sendMessage;
     }
+    public SendMessage tom1(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Murod " +
+                "             Ish turi: Tom yopish " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 93 345 74 44  ");
+        return sendMessage;
+    }
+    public SendMessage tom2(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Xurshed " +
+                "             Ish turi: Tom yopish " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 97 923 69 85  ");
+        return sendMessage;
+    }
+    public SendMessage tom3(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Sheroz " +
+                "             Ish turi: Tom yopish " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 99 595 95 35 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Shoxrux  " +
+                "             Ish turi: Patalok " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 93 999 06 06  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni1(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Jonibek  " +
+                "            Ish turi: Patalok " +
+                "            \uD83D\uDCF1 Telefon raqam: +998 99 777 65 21  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni2(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Dilshod " +
+                "             Ish turi: Patalok " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 91 555 50 34 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni3(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Alisher " +
+                "             Ish turi: Patalok " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 33 900 00 63 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni4(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Ismi: Mizrob " +
+                "             Ish turi: Patalok " +
+                "             \uD83D\uDCF1 Telefon raqam: +998 94 357 38 95 ");
+        return sendMessage;
+    }
+
 
     //lakatsiyalar
     public SendMessage manzillar(Long chatId) {
@@ -380,7 +434,8 @@ public class MyBotService {
         KeyboardRow row4 = new KeyboardRow();
         KeyboardButton button11 = new KeyboardButton();
         button11.setText("OQ (9016)");
-        row4.add(button11);
+        row3.add(button11);
+        rowList.add(row3);
 
         replyKeyboardMarkup.setKeyboard(rowList);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -504,7 +559,7 @@ public class MyBotService {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
-        sendPhoto.setCaption("Tanlang");
+        sendPhoto.setCaption("METRDA HISOBLANADI");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row = new ArrayList<>();
@@ -549,8 +604,8 @@ public class MyBotService {
     public SendPhoto profnastilinlineAtsinkovka(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
-        sendPhoto.setCaption("Tanlang");
+        sendPhoto.setPhoto(new InputFile("C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg"));
+        sendPhoto.setCaption("METRDA HISOBLANADI");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row = new ArrayList<>();

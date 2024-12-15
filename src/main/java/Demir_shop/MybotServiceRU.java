@@ -23,7 +23,7 @@ public class MybotServiceRU{
         List<KeyboardRow> rowList = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
-        button.setText("Профнастил");
+                                        button.setText("Профнастил");
         row.add(button);
 
         KeyboardButton button1 = new KeyboardButton();
@@ -302,7 +302,337 @@ public class MybotServiceRU{
     }
 
 
-    //Inline
+    //profnastil
+    public SendMessage profnastilru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendMessage.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
+        sendPhoto.setCaption("Выбирайте гофру Профнастил");
+        sendMessage.setText("Выбирайте гофру Профнастил");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("прямо вальна");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Экономическая вална");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("П35 ГОФРИРОВАННЫЙ");
+        row1.add(button2);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("П57 ГОФРИРОВАННЫЙ");
+        row1.add(button3);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("ЧЕРЕПИЦА");
+        row2.add(button6);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("КВАДРАТНЫЕ ПЛИТКИ");
+        row2.add(button4);
+        rowList.add(row2);
+
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("НАЗАД");
+        row3.add(button5);
+        rowList.add(row3);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage profnastilmenuru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выберите цвет профиля");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Белый (9003)");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Черный (9005)");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("КРЕМОВЫЙ цвет (1015)");
+        row.add(button2);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("КРАСНЫЙ (3003)");
+        row1.add(button3);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("БАРДОВЫЙ (3005)");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("ЗЕЛЕНЫЙ (6005)");
+        row1.add(button5);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("ТЕМНО-КРАСНЫЙ (3011)");
+        row2.add(button6);
+
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("Коричневый (8017)");
+        row2.add(button7);
+
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("Графитовый серый (7024)");
+        row2.add(button8);
+        rowList.add(row2);
+
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardButton button9 = new KeyboardButton();
+        button9.setText("серый (7004)");
+        row3.add(button9);
+
+        KeyboardButton button10 = new KeyboardButton();
+        button10.setText("Оцинкованный");
+        row3.add(button10);
+
+        KeyboardRow row4 = new KeyboardRow();
+        KeyboardButton button11 = new KeyboardButton();
+        button11.setText("Белый (9016)");
+        row3.add(button11);
+        rowList.add(row3);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+    }
+    public SendMessage profnastilmasterpriceru(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выберите толщину");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("0.30 SMZ 1M = 55 000");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("0.33 SMZ  1M = 58 000");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("0.35 SMZ 1M = 62 000");
+        row.add(button2);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("0.37 SMZ 1M = 65 000");
+        row1.add(button3);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("0.40 SMZ 1M = 67 000");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("0.45 SMZ 1M = 72 000");
+        row1.add(button5);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("0.50 SMZ 1M = 78 000");
+        row2.add(button6);
+
+
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("0.60 SMZ 1M = 83 000");
+        row2.add(button7);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("НАЗАД");
+        row2.add(button8);
+        rowList.add(row2);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage profnastilatsinkovkapriceru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выберите толщину");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("0.30 SMZ 1M = 48 000");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("0.33 SMZ  1M = 51 000");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("0.35 SMZ 1M = 53 000");
+        row.add(button2);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("0.37 SMZ 1M = 55 000 ");
+        row1.add(button3);
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("0.40 SMZ 1M = 58 000 ");
+        row1.add(button4);
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("0.45 SMZ 1M = 62 000 ");
+        row1.add(button5);
+        rowList.add(row1);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("0.50 SMZ 1M = 67 000 ");
+        row2.add(button6);
+
+
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("0.60 SMZ 1M = 72 000 ");
+        row2.add(button7);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("НАЗАД");
+        row2.add(button8);
+        rowList.add(row2);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendPhoto profnastilinlineMasterru(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
+        sendPhoto.setCaption("");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIdprofnastil");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+    public SendPhoto profnastilinlineAtsinkovkaru(Long chatId){
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("\"C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg\""));
+        sendPhoto.setCaption("Tanlang");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-Id");
+        row.add(button);
+        rowList.add(row);
+
+        button=new InlineKeyboardButton();
+        button.setText("1");
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+Id");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Sotib olish");
+        button.setCallbackData("sotibolishId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("⬅\uFE0FQaytish");
+        button.setCallbackData("qaytishIdprofnastil");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return sendPhoto;
+    }
+
+
+    //profil Inline
     public SendMessage profilInline(Long chatId){
 
         SendMessage sendMessage = new SendMessage();
@@ -629,9 +959,6 @@ public class MybotServiceRU{
 
 
     }
-
-
-
     public SendPhoto buyurtmaberishctena5040RU(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -840,8 +1167,6 @@ public class MybotServiceRU{
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena5050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1052,9 +1377,6 @@ public class MybotServiceRU{
 
 
     }
-
-
-
     public SendPhoto buyurtmaberishctena7540(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1263,8 +1585,6 @@ public class MybotServiceRU{
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena7550(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1474,9 +1794,6 @@ public class MybotServiceRU{
 
 
     }
-
-
-
     public SendPhoto buyurtmaberishctena10040(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1685,8 +2002,6 @@ public class MybotServiceRU{
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena10050(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1896,8 +2211,6 @@ public class MybotServiceRU{
 
 
     }
-
-
     public SendMessage plastiklarRU(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -1941,7 +2254,6 @@ public class MybotServiceRU{
         sendMessage.setReplyMarkup(inlineKeyboardMarkup);
         return sendMessage;
     }
-
     public SendMessage plastikendRU(Long chatId){
 
         SendMessage sendMessage = new SendMessage();
@@ -1964,11 +2276,7 @@ public class MybotServiceRU{
         return sendMessage;
     }
 
-
-
     //GipsokardonRU
-
-
     public SendMessage gipsomenuRU(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2002,7 +2310,6 @@ public class MybotServiceRU{
 
 
     }
-
     public SendPhoto nastenavoyInlineRU(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -2157,9 +2464,6 @@ public class MybotServiceRU{
 
 
     }
-
-
-
     public SendPhoto potolochniyInlineRU(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -2225,12 +2529,4 @@ public class MybotServiceRU{
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
-
-
-
-
-
-
-
-
 }

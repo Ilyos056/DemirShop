@@ -623,8 +623,6 @@ public class MyBotServiceENG {
 
 
     //profile Inline
-
-
     public SendMessage profilInlineENG(Long chatId){
 
         SendMessage sendMessage = new SendMessage();
@@ -865,8 +863,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena5040ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1077,8 +1073,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena5050ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1289,8 +1283,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena7540ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1500,9 +1492,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
-
     public SendPhoto buyurtmaberishctena7550ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1711,8 +1700,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena10040ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -1921,8 +1908,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto buyurtmaberishctena10050ENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -2136,8 +2121,6 @@ public class MyBotServiceENG {
 
 
     //GipsokardonENG
-
-
     public SendMessage gipsomenuENG(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
@@ -2171,7 +2154,6 @@ public class MyBotServiceENG {
 
 
     }
-
     public SendPhoto nastenavoyInlineENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -2330,8 +2312,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
     public SendPhoto potolochniyInlineENG(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
@@ -2486,10 +2466,6 @@ public class MyBotServiceENG {
 
 
     }
-
-
-
-
     public SendMessage plastiklarENG(Long chatId){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
