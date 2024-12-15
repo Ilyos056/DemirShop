@@ -257,6 +257,13 @@ public class MybotServiceRU{
 
         return sendMessage;
     }
+    public  SendDocument Photodoc(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
+        return sendDocument;
+    }
+
     public SendLocation location(Long chatId) {
         SendLocation sendLocation = new SendLocation();
         sendLocation.setChatId(chatId);

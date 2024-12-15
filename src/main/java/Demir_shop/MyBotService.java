@@ -974,6 +974,12 @@ public class MyBotService {
 
         return sendMessage;
     }
+    public  SendDocument Photodoc(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
+        return sendDocument;
+    }
     public SendMessage IjtimoiyTarmoq(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);

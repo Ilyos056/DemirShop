@@ -579,6 +579,13 @@ public class MyBotServiceENG {
 
         return sendMessage;
     }
+    public  SendDocument Photodoc(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
+        return sendDocument;
+    }
+
     public SendVideo videoENG(Long chatId) {
         SendVideo sendVideo = new SendVideo();
         sendVideo.setChatId(chatId);

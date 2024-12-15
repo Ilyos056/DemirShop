@@ -709,6 +709,15 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (text.equals("Fotosurat\uD83D\uDCF8")){
+                try {
+                    execute(myBotService.Photodoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (text.equals("Bizning manzil\uD83D\uDDFA")) {
                 try {
                     execute(myBotService.location(chatId));
@@ -919,6 +928,14 @@ public class Mybot extends TelegramLongPollingBot {
                 }
             }
 
+            if (text.equals("Фотография\uD83D\uDCF8")){
+                try {
+                    execute(mybotServiceRU.Photodoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (text.equals("Видео\uD83D\uDCF9")) {
                 try {
                     execute(mybotServiceRU.video(chatId));
@@ -930,6 +947,14 @@ public class Mybot extends TelegramLongPollingBot {
             if (text.equals("Мощность завода\uD83E\uDDBE")) {
                 try {
                     execute(mybotServiceRU.zavotquvvatidoc(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("выбор языка\uD83C\uDF0F")){
+                try {
+                    execute(myBotService.sendMessage(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -1377,6 +1402,14 @@ public class Mybot extends TelegramLongPollingBot {
             if (text.equals("Social network and website\uD83C\uDF10")) {
                 try {
                     execute(myBotServiceENG.IjtimoiyTarmoqENG(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Photograph\uD83D\uDCF8")){
+                try {
+                    execute(myBotServiceENG.Photodoc(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
