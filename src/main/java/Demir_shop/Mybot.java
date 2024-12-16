@@ -719,7 +719,151 @@ public class Mybot extends TelegramLongPollingBot {
             }
 
 
-            //profil hammasi
+
+            //profnastilrus
+            if (text.equals("Профнастил")){
+                try {
+                    execute(mybotServiceRU.profnastilru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("прямо вальна")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Экономическая вална")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("П35 ГОФРИРОВАННЫЙ")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("П57 ГОФРИРОВАННЫЙ")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("ЧЕРЕПИЦА")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("КВАДРАТНЫЕ ПЛИТКИ")){
+                try {
+                    execute(mybotServiceRU.profnastilmenuru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("НАЗАД")){
+                try {
+                    execute(mybotServiceRU.menuRU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Белый (9003)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("Черный (9005)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("КРЕМОВЫЙ цвет (1015)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("КРАСНЫЙ (3003)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("БАРДОВЫЙ (3005)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("ЗЕЛЕНЫЙ (6005)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (text.equals("ТЕМНО-КРАСНЫЙ (3011)")){
+                try {
+                    execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+                } catch (TelegramApiException e){
+
+                throw new RuntimeException(e);
+            }
+        }
+        if (text.equals("Коричневый (8017)")){
+            try {
+                execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (text.equals("Графитовый серый (7024)")){
+            try {
+                execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (text.equals("серый (7004)")){
+            try {
+                execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (text.equals("Белый (9016)")){
+            try {
+                execute(mybotServiceRU.profnastilmasterpriceru(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (text.equals("Оцинкованный")){
+            try {
+                execute(mybotServiceRU.profnastilatsinkovkapriceru(chatId));
+            } catch (TelegramApiException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        //profil hammasi
             if (text.equals("PROFIL")) {
                 try {
                     execute(myBotService.profilMenu(chatId));
