@@ -61,8 +61,6 @@ public class MyBotServiceENG {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-
-
     //profnastil
     public SendMessage profnastilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();

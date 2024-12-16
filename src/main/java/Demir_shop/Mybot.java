@@ -744,6 +744,8 @@ public class Mybot extends TelegramLongPollingBot {
             }
 
             //master profnastil
+
+            //master profnastil
             if (text.equals("0.30 SMZ 1M = 55 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
