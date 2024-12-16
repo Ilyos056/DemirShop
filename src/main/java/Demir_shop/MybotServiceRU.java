@@ -62,265 +62,16 @@ public class MybotServiceRU{
 
 
     }
-    public SendMessage profilMenu(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Выбирать");
 
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-
-        KeyboardRow keyboardRow = new KeyboardRow();
-        KeyboardButton keyboardButton = new KeyboardButton();
-        keyboardButton.setText("\uD83D\uDECDСделать заказ");
-        keyboardRow.add(keyboardButton);
-        rowList.add(keyboardRow);
-
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("Прайс-лист\uD83D\uDCCB");
-        row.add(button);
-        rowList.add(row);
-
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Контакты\uD83D\uDCF1");
-        row.add(button1);
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Каталог\uD83D\uDDC3");
-        row.add(button2);
-
-
-        KeyboardRow row1 = new KeyboardRow();
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("Социальная сеть и сайт\uD83C\uDF10");
-        row1.add(button3);
-        rowList.add(row1);
-
-
-        KeyboardButton button4 = new KeyboardButton();
-        button4.setText("Фотография\uD83D\uDCF8");
-        row1.add(button4);
-
-
-        KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Видео\uD83D\uDCF9");
-        row1.add(button5);
-
-
-        KeyboardRow row2 = new KeyboardRow();
-        KeyboardButton button6 = new KeyboardButton();
-        button6.setText("Мощность завода\uD83E\uDDBE");
-        row2.add(button6);
-        rowList.add(row2);
-
-
-        KeyboardButton button7 = new KeyboardButton();
-        button7.setText("Наш адрес\uD83D\uDDFA");
-        row2.add(button7);
-
-        KeyboardButton button8 = new KeyboardButton();
-        button8.setText("выбор языка\uD83C\uDF0F");
-        row2.add(button8);
-
-
-        KeyboardRow row3 = new KeyboardRow();
-        KeyboardButton button9 = new KeyboardButton();
-        button9.setText("⬅\uFE0F  Назад");
-        row3.add(button9);
-        rowList.add(row3);
-
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-
-
-    }
-    public SendMessage buyurtmaberish(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Выбирать");
-
-        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        List<KeyboardRow> rowList = new ArrayList<>();
-
-
-        KeyboardRow row = new KeyboardRow();
-        KeyboardButton button = new KeyboardButton();
-        button.setText("Профил");
-        row.add(button);
-        rowList.add(row);
-
-        KeyboardButton button1 = new KeyboardButton();
-        button1.setText("Направляющие Профиль");
-        row.add(button1);
-
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Подвески (АГРО)");
-        row.add(button2);
-
-        KeyboardRow row2 = new KeyboardRow();
-        KeyboardButton button4 = new KeyboardButton();
-        button4.setText("Стеновой  профиль 50*40");
-        row2.add(button4);
-        rowList.add(row2);
-
-
-        KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Стеновой  профиль 50*50");
-        row2.add(button5);
-
-
-        KeyboardButton button6 = new KeyboardButton();
-        button6.setText("Стеновой  профиль 75*40");
-        row2.add(button6);
-
-        KeyboardRow row3 = new KeyboardRow();
-        KeyboardButton button7 = new KeyboardButton();
-        button7.setText("Стеновой  профиль 75*50");
-        row3.add(button7);
-        rowList.add(row3);
-
-        KeyboardButton button8 = new KeyboardButton();
-        button8.setText("Стеновой  профиль 100*40");
-        row3.add(button8);
-
-
-        KeyboardButton button9 = new KeyboardButton();
-        button9.setText("Стеновой  профиль 100*50");
-        row3.add(button9);
-
-        KeyboardRow row1 = new KeyboardRow();
-        KeyboardButton button3 = new KeyboardButton();
-        button3.setText("⬅\uFE0FНазад");
-        row1.add(button3);
-        rowList.add(row1);
-
-        replyKeyboardMarkup.setKeyboard(rowList);
-        replyKeyboardMarkup.setResizeKeyboard(true);
-        sendMessage.setReplyMarkup(replyKeyboardMarkup);
-        return sendMessage;
-
-    }
-    public SendDocument prayslistdoc(Long chatId) {
-        SendDocument sendDocument = new SendDocument();
-        sendDocument.setChatId(chatId);
-        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\(UZ) Прайс-лист Demir Profil от 25.04.2024 г.pdf")));
-        sendDocument.setCaption("Для получения прайс-листа с экспортными ценами свяжитесь с нами по указанным ниже контактам:\n" +
-                "\n" +
-                "Отдел продаж – 998 (88) 224-44-44\n" +
-                "Отдел экспорта – 998 (95) 250-59-99\n" +
-                "E-mail – info@demir-profil.com");
-        return sendDocument;
-    }
-    public SendMessage Kontaktlar(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("https://t.me/demirprofiluz");
-
-        return sendMessage;
-    }
-    public SendMessage Kontaktlar2(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Отдел продаж:\n" +
-                "+998 (88) 224-44-44\n" +
-                "\n" +
-                "Отдел экспорта:\n" +
-                "+ 998 (95) 250-59-99\n" +
-                "\n" +
-                "Региональные менеджеры:\n" +
-                "+998 (88) 244-99-99\n" +
-                "+998 (93) 722-06-63\n" +
-                "+998 (97) 395-05-04\n" +
-                "+998 (90) 655-45-25\n" +
-                "\n" +
-                "Почта:\n" +
-                "info@demir-profil.com");
-
-
-        return sendMessage;
-    }
-    public SendMessage IjtimoiyTarmoq(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Соцсети:\n" +
-                "https://www.instagram.com/demirprofiluz\n" +
-                "https://www.facebook.com/demirprofil.uz\n" +
-                "\n" +
-                "Сайт:\n" +
-                "https://demir-profil.com (https://demir-profil.com/)");
-
-        return sendMessage;
-    }
-    public  SendDocument Photodoc(Long chatId){
-        SendDocument sendDocument = new SendDocument();
-        sendDocument.setChatId(chatId);
-        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
-        return sendDocument;
-    }
-
-    public SendLocation location(Long chatId) {
-        SendLocation sendLocation = new SendLocation();
-        sendLocation.setChatId(chatId);
-        sendLocation.setLatitude(39.6354094);
-        sendLocation.setLongitude(66.8741039);
-        return sendLocation;
-    }
-    public SendMessage Manzillar(Long chatId) {
-
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Узбекистан, г. Самарканд, массив Хишрав-2, свободная экономическая зона «Ургут»");
-        return sendMessage;
-    }
-    public SendVideo video(Long chatId) {
-        SendVideo sendVideo = new SendVideo();
-        sendVideo.setChatId(chatId);
-        sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
-
-        return sendVideo;
-
-    }
-    public SendVideo video2(Long chatId) {
-        SendVideo sendVideo = new SendVideo();
-        sendVideo.setChatId(chatId);
-        sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
-
-        return sendVideo;
-
-    }
-    public SendDocument document(Long chatId) {
-        SendDocument sendDocument = new SendDocument();
-        sendDocument.setChatId(chatId);
-        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\demirshopdocument.pdf")));
-        return sendDocument;
-    }
-    public SendDocument zavotquvvatidoc(Long chatId) {
-        SendDocument sendDocument = new SendDocument();
-        sendDocument.setChatId(chatId);
-        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Мощность завода Demir Profil.pdf")));
-
-        return sendDocument;
-    }
-
-
-    //profnastil
+    //Profnastil
     public SendMessage profnastilru(Long chatId) {
         SendMessage sendMessage = new SendMessage();
-        SendPhoto sendPhoto = new SendPhoto();
-        sendPhoto.setChatId(chatId);
         sendMessage.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
-        sendPhoto.setCaption("Выбирайте гофру Профнастил");
         sendMessage.setText("Выбирайте гофру Профнастил");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         List<KeyboardRow> rowList = new ArrayList<>();
+
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
         button.setText("прямо вальна");
@@ -353,7 +104,7 @@ public class MybotServiceRU{
 
         KeyboardRow row3 = new KeyboardRow();
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("НАЗАД");
+        button5.setText("НаЗАД");
         row3.add(button5);
         rowList.add(row3);
 
@@ -637,6 +388,365 @@ public class MybotServiceRU{
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
+
+
+    //Ustalar ro`yxati
+    public SendMessage ustalarRU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выберите мастера, который вам нужен");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("На крыше");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Паталочни");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("назад");
+        row1.add(button2);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage tomRU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Бабур " +
+                "             Вид работ: Кровельные работы" +
+                "             \uD83D\uDCF1 Номер телефона: +998 99 944 22 23 ");
+        return sendMessage;
+    }
+    public SendMessage tom1RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Мурад " +
+                "            Вид работ: Кровельные работы " +
+                "             \uD83D\uDCF1 Номер телефона: +998 93 345 74 44  ");
+        return sendMessage;
+    }
+    public SendMessage tom2RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Хуршед" +
+                "            Вид работ: Кровельные работы " +
+                "             \uD83D\uDCF1 Номер телефона: +998 97 923 69 85  ");
+        return sendMessage;
+    }
+    public SendMessage tom3RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Шероз " +
+                "             Вид работ: Кровельные работы " +
+                "             \uD83D\uDCF1 Номер телефона: +998 99 595 95 35 ");
+        return sendMessage;
+    }
+    public SendMessage patalochniRU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27Имя: Шохрух  " +
+                "             Вид работы: Паталок " +
+                "             \uD83D\uDCF1 Номер телефона: +998 93 999 06 06  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni1RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Джонибек  " +
+                "           Вид работы: Паталок " +
+                "            \uD83D\uDCF1 Номер телефона: +998 99 777 65 21  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni2RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Дилшад " +
+                "             Вид работы: Паталок " +
+                "             \uD83D\uDCF1 Номер телефона: +998 91 555 50 34 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni3RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Алишер " +
+                "             Вид работы: Паталок " +
+                "             \uD83D\uDCF1 Номер телефона: +998 33 900 00 63 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni4RU(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Имя: Мизроб " +
+                "             Вид работы: Паталок " +
+                "             \uD83D\uDCF1 Номер телефона: +998 94 357 38 95 ");
+        return sendMessage;
+    }
+
+
+
+
+
+
+
+
+
+    public SendMessage profilMenu(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выбирать");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+
+        KeyboardRow keyboardRow = new KeyboardRow();
+        KeyboardButton keyboardButton = new KeyboardButton();
+        keyboardButton.setText("\uD83D\uDECDСделать заказ");
+        keyboardRow.add(keyboardButton);
+        rowList.add(keyboardRow);
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Прайс-лист\uD83D\uDCCB");
+        row.add(button);
+        rowList.add(row);
+
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Контакты\uD83D\uDCF1");
+        row.add(button1);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Каталог\uD83D\uDDC3");
+        row.add(button2);
+
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Социальная сеть и сайт\uD83C\uDF10");
+        row1.add(button3);
+        rowList.add(row1);
+
+
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Фотография\uD83D\uDCF8");
+        row1.add(button4);
+
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Видео\uD83D\uDCF9");
+        row1.add(button5);
+
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("Мощность завода\uD83E\uDDBE");
+        row2.add(button6);
+        rowList.add(row2);
+
+
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("Наш адрес\uD83D\uDDFA");
+        row2.add(button7);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("выбор языка\uD83C\uDF0F");
+        row2.add(button8);
+
+
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardButton button9 = new KeyboardButton();
+        button9.setText("⬅\uFE0F  Назад");
+        row3.add(button9);
+        rowList.add(row3);
+
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+
+    }
+    public SendMessage buyurtmaberish(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выбирать");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+
+
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("Профил");
+        row.add(button);
+        rowList.add(row);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Направляющие Профиль");
+        row.add(button1);
+
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Подвески (АГРО)");
+        row.add(button2);
+
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardButton button4 = new KeyboardButton();
+        button4.setText("Стеновой  профиль 50*40");
+        row2.add(button4);
+        rowList.add(row2);
+
+
+        KeyboardButton button5 = new KeyboardButton();
+        button5.setText("Стеновой  профиль 50*50");
+        row2.add(button5);
+
+
+        KeyboardButton button6 = new KeyboardButton();
+        button6.setText("Стеновой  профиль 75*40");
+        row2.add(button6);
+
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardButton button7 = new KeyboardButton();
+        button7.setText("Стеновой  профиль 75*50");
+        row3.add(button7);
+        rowList.add(row3);
+
+        KeyboardButton button8 = new KeyboardButton();
+        button8.setText("Стеновой  профиль 100*40");
+        row3.add(button8);
+
+
+        KeyboardButton button9 = new KeyboardButton();
+        button9.setText("Стеновой  профиль 100*50");
+        row3.add(button9);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("⬅\uFE0FНазад");
+        row1.add(button3);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+
+    }
+    public SendDocument prayslistdoc(Long chatId) {
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\(UZ) Прайс-лист Demir Profil от 25.04.2024 г.pdf")));
+        sendDocument.setCaption("Для получения прайс-листа с экспортными ценами свяжитесь с нами по указанным ниже контактам:\n" +
+                "\n" +
+                "Отдел продаж – 998 (88) 224-44-44\n" +
+                "Отдел экспорта – 998 (95) 250-59-99\n" +
+                "E-mail – info@demir-profil.com");
+        return sendDocument;
+    }
+    public SendMessage Kontaktlar(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("https://t.me/demirprofiluz");
+
+        return sendMessage;
+    }
+    public SendMessage Kontaktlar2(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Отдел продаж:\n" +
+                "+998 (88) 224-44-44\n" +
+                "\n" +
+                "Отдел экспорта:\n" +
+                "+ 998 (95) 250-59-99\n" +
+                "\n" +
+                "Региональные менеджеры:\n" +
+                "+998 (88) 244-99-99\n" +
+                "+998 (93) 722-06-63\n" +
+                "+998 (97) 395-05-04\n" +
+                "+998 (90) 655-45-25\n" +
+                "\n" +
+                "Почта:\n" +
+                "info@demir-profil.com");
+
+
+        return sendMessage;
+    }
+    public SendMessage IjtimoiyTarmoq(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Соцсети:\n" +
+                "https://www.instagram.com/demirprofiluz\n" +
+                "https://www.facebook.com/demirprofil.uz\n" +
+                "\n" +
+                "Сайт:\n" +
+                "https://demir-profil.com (https://demir-profil.com/)");
+
+        return sendMessage;
+    }
+    public  SendDocument Photodoc(Long chatId){
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
+        return sendDocument;
+    }
+
+    public SendLocation location(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.6354094);
+        sendLocation.setLongitude(66.8741039);
+        return sendLocation;
+    }
+    public SendMessage Manzillar(Long chatId) {
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Узбекистан, г. Самарканд, массив Хишрав-2, свободная экономическая зона «Ургут»");
+        return sendMessage;
+    }
+    public SendVideo video(Long chatId) {
+        SendVideo sendVideo = new SendVideo();
+        sendVideo.setChatId(chatId);
+        sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
+
+        return sendVideo;
+
+    }
+    public SendVideo video2(Long chatId) {
+        SendVideo sendVideo = new SendVideo();
+        sendVideo.setChatId(chatId);
+        sendVideo.setVideo(new InputFile(new File("C:\\Users\\hp\\Videos\\Captures\\demirshopvideo.mp4")));
+
+        return sendVideo;
+
+    }
+    public SendDocument document(Long chatId) {
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\demirshopdocument.pdf")));
+        return sendDocument;
+    }
+    public SendDocument zavotquvvatidoc(Long chatId) {
+        SendDocument sendDocument = new SendDocument();
+        sendDocument.setChatId(chatId);
+        sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Мощность завода Demir Profil.pdf")));
+
+        return sendDocument;
+    }
+
+
 
 
     //profil Inline

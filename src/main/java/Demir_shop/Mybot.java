@@ -1054,6 +1054,47 @@ public class Mybot extends TelegramLongPollingBot {
 
             //RusTili
 
+
+
+            if (text.equals("Список мастеров")){
+                try {
+                    execute(mybotServiceRU.ustalarRU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("На крыше")){
+                try {
+                    execute(mybotServiceRU.tomRU(chatId));
+                    execute(mybotServiceRU.tom1RU(chatId));
+                    execute(mybotServiceRU.tom2RU(chatId));
+                    execute(mybotServiceRU.tom3RU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("Паталочни")){
+                try {
+                    execute(mybotServiceRU.patalochniRU(chatId));
+                    execute(mybotServiceRU.patalochni1RU(chatId));
+                    execute(mybotServiceRU.patalochni2RU(chatId));
+                    execute(mybotServiceRU.patalochni3RU(chatId));
+                    execute(mybotServiceRU.patalochni4RU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (text.equals("назад")){
+                try {
+                    execute(mybotServiceRU.menuRU(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (text.equals("Русский язык")) {
                 try {
                     execute(mybotServiceRU.menuRU(chatId));
