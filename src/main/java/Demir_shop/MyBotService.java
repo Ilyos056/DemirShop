@@ -219,6 +219,10 @@ public class MyBotService {
     }
 
 
+
+
+
+
     //lakatsiyalar
     public SendMessage manzillar(Long chatId) {
         SendMessage sendMessage = new SendMessage();
