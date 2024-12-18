@@ -263,26 +263,26 @@ public class MybotServiceRU{
 
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("0.37 SMZ 1M = 55 000 ");
+        button3.setText("0.37 SMZ 1M = 55 000");
         row1.add(button3);
 
         KeyboardButton button4 = new KeyboardButton();
-        button4.setText("0.40 SMZ 1M = 58 000 ");
+        button4.setText("0.40 SMZ 1M = 58 000");
         row1.add(button4);
 
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("0.45 SMZ 1M = 62 000 ");
+        button5.setText("0.45 SMZ 1M = 62 000");
         row1.add(button5);
         rowList.add(row1);
 
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button6 = new KeyboardButton();
-        button6.setText("0.50 SMZ 1M = 67 000 ");
+        button6.setText("0.50 SMZ 1M = 67 000");
         row2.add(button6);
 
 
         KeyboardButton button7 = new KeyboardButton();
-        button7.setText("0.60 SMZ 1M = 72 000 ");
+        button7.setText("0.60 SMZ 1M = 72 000");
         row2.add(button7);
 
         KeyboardButton button8 = new KeyboardButton();
@@ -325,15 +325,15 @@ public class MybotServiceRU{
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Sotib olish");
-        button.setCallbackData("sotibolishId");
+        button.setText("Покупка");
+        button.setCallbackData("sotibolishRUId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("⬅\uFE0FQaytish");
-        button.setCallbackData("qaytishIdprofnastil");
+        button.setText("⬅\uFE0FНазад");
+        button.setCallbackData("qaytishIdpRUrofnastil");
         row.add(button);
         rowList.add(row);
 
@@ -346,7 +346,7 @@ public class MybotServiceRU{
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("\"C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg\""));
-        sendPhoto.setCaption("Tanlang");
+        sendPhoto.setCaption("Выбирать");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row = new ArrayList<>();
@@ -371,14 +371,14 @@ public class MybotServiceRU{
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("Sotib olish");
-        button.setCallbackData("sotibolishId");
+        button.setText("Покупка");
+        button.setCallbackData("sotibolishRUId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("⬅\uFE0FQaytish");
+        button.setText("Назад");
         button.setCallbackData("qaytishIdprofnastil");
         row.add(button);
         rowList.add(row);
@@ -389,6 +389,103 @@ public class MybotServiceRU{
         return sendPhoto;
     }
 
+
+    //lakatsitya rus
+    public SendMessage manzillarru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Выберите адрес");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardButton button = new KeyboardButton();
+        KeyboardRow row = new KeyboardRow();
+        button.setText("Филиал 1");
+        row.add(button);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Филиал 2");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Филиал 3");
+        row1.add(button2);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Назад");
+        row1.add(button3);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendLocation firstlakatsiyaru(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.597569);
+        sendLocation.setLongitude(66.929696);
+        return sendLocation;
+
+    }
+    public SendMessage firstmessageru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 1-филиал\n" +
+                "\uD83D\uDDFA Адрес: Базар Такта, Самарканд, Самаркандская область, Узбекистан\n" +
+                "\n" +
+                "\uD83C\uDFE2Ориентир: напротив Хумо Мед\n" +
+                "\n" +
+                "☎\uFE0FТелефон: +998939926700.\n" +
+                "☎\uFE0FТелефон: +998987076700.\n" +
+                "\uD83D\uDD59 Время работы: 7:00 - 20:00");
+        return sendMessage;
+    }
+    public SendLocation secondlakatsiyaru(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.5991705);
+        sendLocation.setLongitude(66.9356548);
+        return sendLocation;
+
+    }
+    public SendMessage secondmessageru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 2-филиал\n" +
+                "\uD83D\uDDFA Адрес: Базар Такта, Самарканд, Самаркандская область, Узбекистан\n" +
+                "\n" +
+                "\uD83C\uDFE2Ориентир: улица Новой Жизни\n" +
+                "\n" +
+                "☎\uFE0FТелефон: +998982732101.\n" +
+                "☎\uFE0FТелефон: +998902713131.\n" +
+                "\uD83D\uDD59 Время работы: 7:00 - 20:00.");
+        return sendMessage;
+    }
+    public SendLocation thirdlakatsiyaru(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.598700);
+        sendLocation.setLongitude(66.936107);
+        return sendLocation;
+
+    }
+    public SendMessage thirdmessageru(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD  3-филиал\n" +
+                "\uD83D\uDDFA Адрес: Базар Такта, Самарканд, Самаркандская область, Узбекистан\n" +
+                "\n" +
+                "\uD83C\uDFE2Ориентир: Напротив Тахт Базара\n" +
+                "\n" +
+                "☎\uFE0FТелефон: +998982791999.\n" +
+                "☎\uFE0FТелефон: +998937235474.\n" +
+                "\uD83D\uDD59 Время работы: 7:00 - 20:00");
+        return sendMessage;
+    }
 
     //Ustalar ro`yxati
     public SendMessage ustalarRU(Long chatId){
@@ -491,12 +588,6 @@ public class MybotServiceRU{
                 "             \uD83D\uDCF1 Номер телефона: +998 94 357 38 95 ");
         return sendMessage;
     }
-
-
-
-
-
-
 
 
 
@@ -745,9 +836,6 @@ public class MybotServiceRU{
 
         return sendDocument;
     }
-
-
-
 
     //profil Inline
     public SendMessage profilInline(Long chatId){

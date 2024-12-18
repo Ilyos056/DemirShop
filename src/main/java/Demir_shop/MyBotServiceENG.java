@@ -61,6 +61,7 @@ public class MyBotServiceENG {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
+
     //profnastil
     public SendMessage profnastilMenu(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -390,7 +391,208 @@ public class MyBotServiceENG {
     }
 
 
+    //lakatsiya english
+    public SendMessage manzillareng(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Select an address");
 
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardButton button = new KeyboardButton();
+        KeyboardRow row = new KeyboardRow();
+        button.setText("1-Branch");
+        row.add(button);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("2-Branch");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("3-Branch");
+        row1.add(button2);
+
+        KeyboardButton button3 = new KeyboardButton();
+        button3.setText("Back");
+        row1.add(button3);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendLocation firstlakatsiyaeng(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.597569);
+        sendLocation.setLongitude(66.929696);
+        return sendLocation;
+
+    }
+    public SendMessage firstmessageeng(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 1-Branch\n" +
+                "\uD83D\uDDFA Address: Takta Bazaar, Samarkand, Samarkand Region, Uzbekistan\n" +
+                "\n" +
+                "\uD83C\uDFE2 Landmark: in front of Humo Med\n" +
+                "\n" +
+                "☎\uFE0F Phone number: +998939926700\n" +
+                "☎\uFE0F Phone number: +998987076700\n" +
+                "\uD83D\uDD59 Working hours: 7:00 - 20:00");
+        return sendMessage;
+    }
+    public SendLocation secondlakatsiyaeng(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.5991705);
+        sendLocation.setLongitude(66.9356548);
+        return sendLocation;
+
+    }
+    public SendMessage secondmessageeng(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 2-Filial" +
+                "                     \n" +
+                "\uD83D\uDDFA Manzil: Тахта бозор, Samarkand, Samarqand Region, Uzbekistan \n" +
+                "                     \n" +
+                "\uD83C\uDFE2 Orientir: Yangi hayot ko`chasi \n" +
+                "                     \n" +
+                "☎\uFE0F Telefon raqami:  +998982732101\n" +
+                "☎\uFE0F Telefon raqami:  +998902713131\n" +
+                "\uD83D\uDD59 Ish vaqti : 7:00 - 20:00");
+        return sendMessage;
+    }
+    public SendLocation thirdlakatsiyaeng(Long chatId) {
+        SendLocation sendLocation = new SendLocation();
+        sendLocation.setChatId(chatId);
+        sendLocation.setLatitude(39.598700);
+        sendLocation.setLongitude(66.936107);
+        return sendLocation;
+
+    }
+    public SendMessage thirdmessageeng(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("\uD83D\uDCCD 3-Filial" +
+                "                     \n" +
+                "\uD83D\uDDFA Manzil: Тахта бозор, Samarkand, Samarqand Region, Uzbekistan \n" +
+                "                     \n" +
+                "\uD83C\uDFE2 Orientir: Taxta Bozor ro`parasida \n" +
+                "                     \n" +
+                "☎\uFE0F Telefon raqami:  +998982791999\n" +
+                "☎\uFE0F Telefon raqami:  +998937235474\n" +
+                "\uD83D\uDD59 Ish vaqti : 7:00 - 20:00");
+        return sendMessage;
+    }
+
+
+
+    //Ustalar ro`yxatienglish
+    public SendMessage ustalareng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Choose the master you need");
+
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        List<KeyboardRow> rowList = new ArrayList<>();
+        KeyboardRow row = new KeyboardRow();
+        KeyboardButton button = new KeyboardButton();
+        button.setText("On the roof");
+        row.add(button);
+
+        KeyboardButton button1 = new KeyboardButton();
+        button1.setText("Patalok");
+        row.add(button1);
+        rowList.add(row);
+
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardButton button2 = new KeyboardButton();
+        button2.setText("Back");
+        row1.add(button2);
+        rowList.add(row1);
+
+        replyKeyboardMarkup.setKeyboard(rowList);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        return sendMessage;
+    }
+    public SendMessage tomeng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Bobur  " +
+                "              Type of work: Roofing" +
+                "             \uD83D\uDCF1 Phone number: +998 99 944 22 23 ");
+        return sendMessage;
+    }
+    public SendMessage tom1eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Murod " +
+                "            Type of work: Tom yopish " +
+                "             \uD83D\uDCF1 Phone number: +998 93 345 74 44  ");
+        return sendMessage;
+    }
+    public SendMessage tom2eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Xurshed " +
+                "            Type of work: Tom yopish " +
+                "             \uD83D\uDCF1 Phone number: +998 97 923 69 85  ");
+        return sendMessage;
+    }
+    public SendMessage tom3eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Sheroz " +
+                "             Type of work: Tom yopish " +
+                "             \uD83D\uDCF1 Phone number: +998 99 595 95 35 ");
+        return sendMessage;
+    }
+    public SendMessage patalochnieng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Shoxrux  " +
+                "             Type of work: Patalok " +
+                "             \uD83D\uDCF1 Phone number: +998 93 999 06 06  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni1eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Jonibek  " +
+                "            Type of work: Patalok " +
+                "            \uD83D\uDCF1 Phone number: +998 99 777 65 21  ");
+        return sendMessage;
+    }
+    public SendMessage patalochni2eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Dilshod " +
+                "             Type of work: Patalok " +
+                "             \uD83D\uDCF1 Phone number: +998 91 555 50 34 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni3eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Alisher " +
+                "             Type of work: Patalok " +
+                "             \uD83D\uDCF1 Phone number: +998 33 900 00 63 ");
+        return sendMessage;
+    }
+    public SendMessage patalochni4eng(Long chatId){
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(" \uD83E\uDDD1\u200D\uD83D\uDD27 Name: Mizrob " +
+                "             Type of work: Patalok " +
+                "             \uD83D\uDCF1 Phone number: +998 94 357 38 95 ");
+        return sendMessage;
+    }
 
     //profil
 

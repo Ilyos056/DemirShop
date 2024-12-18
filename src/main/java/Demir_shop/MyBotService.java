@@ -218,11 +218,6 @@ public class MyBotService {
         return sendMessage;
     }
 
-
-
-
-
-
     //lakatsiyalar
     public SendMessage manzillar(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -2849,7 +2844,6 @@ public class MyBotService {
 
 
     }
-
     public SendPhoto nastenavoyInline(Long chatId){
        SendPhoto sendPhoto = new SendPhoto();
        sendPhoto.setChatId(chatId);
