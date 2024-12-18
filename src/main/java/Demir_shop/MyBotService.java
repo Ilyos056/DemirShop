@@ -451,40 +451,40 @@ public class MyBotService {
         List<KeyboardRow> rowList = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
-        button.setText("0.30 SMZ 1M = 55 000");
+        button.setText("0.30 smz 1M = 55 000");
         row.add(button);
 
         KeyboardButton button1 = new KeyboardButton();
-        button1.setText("0.33 SMZ  1M = 58 000");
+        button1.setText("0.33 smz  1M = 58 000");
         row.add(button1);
 
         KeyboardButton button2 = new KeyboardButton();
-        button2.setText("0.35 SMZ 1M = 62 000");
+        button2.setText("0.35 smz 1M = 62 000");
         row.add(button2);
         rowList.add(row);
 
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("0.37 SMZ 1M = 65 000");
+        button3.setText("0.37 smz 1M = 65 000");
         row1.add(button3);
 
         KeyboardButton button4 = new KeyboardButton();
-        button4.setText("0.40 SMZ 1M = 67 000");
+        button4.setText("0.40 smz 1M = 67 000");
         row1.add(button4);
 
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("0.45 SMZ 1M = 72 000");
+        button5.setText("0.45 smz 1M = 72 000");
         row1.add(button5);
         rowList.add(row1);
 
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button6 = new KeyboardButton();
-        button6.setText("0.50 SMZ 1M = 78 000");
+        button6.setText("0.50 smz 1M = 78 000");
         row2.add(button6);
 
 
         KeyboardButton button7 = new KeyboardButton();
-        button7.setText("0.60 SMZ 1M = 83 000");
+        button7.setText("0.60 smz 1M = 83 000");
         row2.add(button7);
 
         KeyboardButton button8 = new KeyboardButton();
@@ -507,40 +507,40 @@ public class MyBotService {
         List<KeyboardRow> rowList = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
         KeyboardButton button = new KeyboardButton();
-        button.setText("0.30 SMZ 1M = 48 000");
+        button.setText("0.30 smz 1M = 48 000");
         row.add(button);
 
         KeyboardButton button1 = new KeyboardButton();
-        button1.setText("0.33 SMZ  1M = 51 000");
+        button1.setText("0.33 smz  1M = 51 000");
         row.add(button1);
 
         KeyboardButton button2 = new KeyboardButton();
-        button2.setText("0.35 SMZ 1M = 53 000");
+        button2.setText("0.35 smz 1M = 53 000");
         row.add(button2);
         rowList.add(row);
 
         KeyboardRow row1 = new KeyboardRow();
         KeyboardButton button3 = new KeyboardButton();
-        button3.setText("0.37 SMZ 1M = 55 000 ");
+        button3.setText("0.37 smz 1M = 55 000 ");
         row1.add(button3);
 
         KeyboardButton button4 = new KeyboardButton();
-        button4.setText("0.40 SMZ 1M = 58 000 ");
+        button4.setText("0.40 smz 1M = 58 000 ");
         row1.add(button4);
 
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("0.45 SMZ 1M = 62 000 ");
+        button5.setText("0.45 smz 1M = 62 000 ");
         row1.add(button5);
         rowList.add(row1);
 
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button6 = new KeyboardButton();
-        button6.setText("0.50 SMZ 1M = 67 000 ");
+        button6.setText("0.50 smz 1M = 67 000 ");
         row2.add(button6);
 
 
         KeyboardButton button7 = new KeyboardButton();
-        button7.setText("0.60 SMZ 1M = 72 000 ");
+        button7.setText("0.60 smz 1M = 72 000 ");
         row2.add(button7);
 
         KeyboardButton button8 = new KeyboardButton();
