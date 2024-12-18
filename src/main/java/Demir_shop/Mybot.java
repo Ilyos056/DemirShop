@@ -5,6 +5,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
+import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -35,11 +36,93 @@ public class Mybot extends TelegramLongPollingBot {
     private Map<Long, String> userStateKartaENG = new HashMap<>();
     private Map<String, String> userInfoKartaENG = new HashMap<>();
 
+    private final Map<Long, BotState> userStates = new HashMap<>();
+    private final Map<Long, Double> userLength = new HashMap<>();
+
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
             Long chatId = update.getMessage().getChatId();
             String text = update.getMessage().getText();
+
+
+
+
+
+
+
+
+            String response;
+
+            if (text.equals("Kalkulyator")) {
+                response = "Xonaning bo'yini kiriting (masalan, 5):";
+                userStates.put(chatId, BotState.ASK_LENGTH); // Holatni boshlash
+            } else if (userStates.containsKey(chatId)) {
+                BotState currentState = userStates.get(chatId);
+
+                switch (currentState) {
+                    case ASK_LENGTH:
+                        try {
+                            double length = Double.parseDouble(text);
+                            userLength.put(chatId, length); // Xonaning bo'yini saqlash
+                            response = "Endi xonaning enini kiriting (masalan, 3):";
+                            userStates.put(chatId, BotState.ASK_WIDTH);
+                        } catch (NumberFormatException e) {
+                            response = "Iltimos, to'g'ri son kiriting!";
+                        }
+                        break;
+
+                    case ASK_WIDTH:
+                        try {
+                            double width = Double.parseDouble(text);
+                            double length = userLength.getOrDefault(chatId, 0.0);
+                            double area = length * width;
+
+                            response = "Xonaning maydoni: " + area + " kvadrat metr.";
+                            userStates.put(chatId, BotState.NONE); // Holatni tiklash
+                        } catch (NumberFormatException e) {
+                            response = "Iltimos, to'g'ri son kiriting!";
+                        }
+                        break;
+
+                    default:
+                        response = "Nimadir noto'g'ri ketdi. Qayta urinib ko'ring!";
+                        userStates.put(chatId, BotState.NONE);
+                }
+            } else {
+                response = "Iltimos, menyudan tugmani tanlang.";
+            }
+
+            sendmessage(chatId, response);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             if (text.startsWith("\uD83D\uDCAC Izoh qoldirish")) {
@@ -3409,6 +3492,12 @@ private void sendmessage(Long chatId, String text){
         throw new RuntimeException(e);
     }
 }
+
+    private enum BotState {
+        ASK_LENGTH,    // Bo'yni so'rash holati
+        ASK_WIDTH,     // Enni so'rash holati
+        NONE,       // Holat yo'q
+    }
 
 
 
