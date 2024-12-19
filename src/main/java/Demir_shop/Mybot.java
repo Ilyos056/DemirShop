@@ -568,13 +568,13 @@ public class Mybot extends TelegramLongPollingBot {
                 }
 
             }
-            if (text.equals("Orqaga")){
-                try {
-                    execute(myBotService.menu(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            //if (text.equals("Orqaga")){
+              //  try {
+                //    execute(myBotService.menu(chatId));
+                //} catch (TelegramApiException e) {
+                  //  throw new RuntimeException(e);
+                //}
+           // }
 
             //Ustalar ro`yxati english
             if (text.equals("List of Masters")){
@@ -757,6 +757,7 @@ public class Mybot extends TelegramLongPollingBot {
             }
 
             //master profnastil
+
             if (text.equals("0.30 smz 1M = 55 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
@@ -764,49 +765,49 @@ public class Mybot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.33 smz  1M = 58 000")) {
+            if (text.equals("0.33 smz 1M = 58 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.35 smz  1M = 62 000")) {
+            if (text.equals("0.35 smz 1M = 62 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.37 smz  1M = 65 000")) {
+            if (text.equals("0.37 smz 1M = 65 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.40 smz  1M = 67 000")) {
+            if (text.equals("0.40 smz 1M = 67 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.45 smz  1M = 72 000")) {
+            if (text.equals("0.45 smz 1M = 72 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.50 smz  1M = 78 000")) {
+            if (text.equals("0.50 smz 1M = 78 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("0.60 smz  1M = 83 000")) {
+            if (text.equals("0.60 smz 1M = 83 000")) {
                 try {
                     execute(myBotService.profnastilinlineMaster(chatId));
                 } catch (TelegramApiException e) {
