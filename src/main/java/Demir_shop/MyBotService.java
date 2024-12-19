@@ -362,7 +362,7 @@ public class MyBotService {
 
         KeyboardRow row3 = new KeyboardRow();
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("ORQAGA");
+        button5.setText("Orqaga");
         row3.add(button5);
         rowList.add(row3);
 
@@ -600,7 +600,7 @@ public class MyBotService {
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
-    public SendPhoto profnastilinlineAtsinkovka(Long chatId){
+    public SendPhoto profnastilinlineAtsinkovka(Long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg"));
@@ -615,27 +615,27 @@ public class MyBotService {
         row.add(button);
         rowList.add(row);
 
-        button=new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("1");
         button.setCallbackData("sonId");
         row.add(button);
 
 
-        button=new InlineKeyboardButton();
+        button = new InlineKeyboardButton();
         button.setText("➕");
         button.setCallbackData("+Id");
         row.add(button);
 
 
-        row=new ArrayList<>();
-        button=new InlineKeyboardButton();
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
         button.setText("Sotib olish");
         button.setCallbackData("sotibolishId");
         row.add(button);
         rowList.add(row);
 
-        row=new ArrayList<>();
-        button=new InlineKeyboardButton();
+        row = new ArrayList<>();
+        button = new InlineKeyboardButton();
         button.setText("⬅\uFE0FQaytish");
         button.setCallbackData("qaytishIdprofnastil");
         row.add(button);
