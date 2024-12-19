@@ -321,11 +321,7 @@ public class MyBotService {
     //profnastil
     public SendMessage profnastil(Long chatId) {
         SendMessage sendMessage = new SendMessage();
-        SendPhoto sendPhoto = new SendPhoto();
-        sendPhoto.setChatId(chatId);
         sendMessage.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
-        sendPhoto.setCaption("Profnastil gofrasini tanlang");
         sendMessage.setText("Profnastil gofrasini tanlang");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
@@ -563,6 +559,7 @@ public class MyBotService {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row = new ArrayList<>();
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("➖");
         button.setCallbackData("-Id");

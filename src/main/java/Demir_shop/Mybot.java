@@ -39,6 +39,12 @@ public class Mybot extends TelegramLongPollingBot {
     private final Map<Long, BotState> userStates = new HashMap<>();
     private final Map<Long, Double> userLength = new HashMap<>();
 
+    private final Map<Long, BotState> userStatesRU = new HashMap<>();
+    private final Map<Long, Double> userLengthRU = new HashMap<>();
+
+    private final Map<Long, BotState> userStatesENG = new HashMap<>();
+    private final Map<Long, Double> userLengthENG = new HashMap<>();
+
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -46,18 +52,14 @@ public class Mybot extends TelegramLongPollingBot {
             String text = update.getMessage().getText();
 
 
-
-
-
-
-
-
-            String response;
-
             if (text.equals("Kalkulyator")) {
-                response = "Xonaning bo'yini kiriting (masalan, 5):";
+                // Faqat "Kalkulyator" tugmasi bosilganda javob beriladi
+                sendmessage(chatId, "Tomingizni bo'yini kiriting (masalan, 5.20):");
                 userStates.put(chatId, BotState.ASK_LENGTH); // Holatni boshlash
-            } else if (userStates.containsKey(chatId)) {
+                return;
+            }
+
+            if (userStates.containsKey(chatId)) {
                 BotState currentState = userStates.get(chatId);
 
                 switch (currentState) {
@@ -65,10 +67,10 @@ public class Mybot extends TelegramLongPollingBot {
                         try {
                             double length = Double.parseDouble(text);
                             userLength.put(chatId, length); // Xonaning bo'yini saqlash
-                            response = "Endi xonaning enini kiriting (masalan, 3):";
+                            sendmessage(chatId, "Endi tomingizni enini kiriting (masalan, 3.50):");
                             userStates.put(chatId, BotState.ASK_WIDTH);
                         } catch (NumberFormatException e) {
-                            response = "Iltimos, to'g'ri son kiriting!";
+                            sendmessage(chatId, "Iltimos, to'g'ri son kiriting!");
                         }
                         break;
 
@@ -78,22 +80,113 @@ public class Mybot extends TelegramLongPollingBot {
                             double length = userLength.getOrDefault(chatId, 0.0);
                             double area = length * width;
 
-                            response = "Xonaning maydoni: " + area + " kvadrat metr.";
+                            sendmessage(chatId, "Xonaning maydoni: " + area + " kvadrat metr.");
                             userStates.put(chatId, BotState.NONE); // Holatni tiklash
                         } catch (NumberFormatException e) {
-                            response = "Iltimos, to'g'ri son kiriting!";
+                            sendmessage(chatId, "Iltimos, to'g'ri son kiriting!");
                         }
                         break;
 
                     default:
-                        response = "Nimadir noto'g'ri ketdi. Qayta urinib ko'ring!";
-                        userStates.put(chatId, BotState.NONE);
+                        // Holat aniqlanmagan bo'lsa, javob berilmaydi
+                        break;
                 }
-            } else {
-                response = "Iltimos, menyudan tugmani tanlang.";
             }
 
-            sendmessage(chatId, response);
+
+
+
+
+            if (text.equals("Калькулятор")) {
+                // Faqat "Kalkulyator" tugmasi bosilganda javob beriladi
+                sendmessage(chatId, "Введите длину вашей крыши (например, 5,20):");
+                userStatesRU.put(chatId, BotState.ASK_LENGTH); // Holatni boshlash
+                return;
+            }
+
+            if (userStatesRU.containsKey(chatId)) {
+                BotState currentState = userStatesRU.get(chatId);
+
+                switch (currentState) {
+                    case ASK_LENGTH:
+                        try {
+                            double length = Double.parseDouble(text);
+                            userLengthRU.put(chatId, length); // Xonaning bo'yini saqlash
+                            sendmessage(chatId, "Теперь введите ширину вашей крыши (например, 3,50).:");
+                            userStatesRU.put(chatId, BotState.ASK_WIDTH);
+                        } catch (NumberFormatException e) {
+                            sendmessage(chatId, "Пожалуйста, введите действительный номер!");
+                        }
+                        break;
+
+                    case ASK_WIDTH:
+                        try {
+                            double width = Double.parseDouble(text);
+                            double length = userLengthRU.getOrDefault(chatId, 0.0);
+                            double area = length * width;
+
+                            sendmessage(chatId, "Площадь комнаты: " + area + " квадратный метр.");
+                            userStatesRU.put(chatId, BotState.NONE); // Holatni tiklash
+                        } catch (NumberFormatException e) {
+                            sendmessage(chatId, "Пожалуйста, введите действительный номер!");
+                        }
+                        break;
+
+                    default:
+                        // Holat aniqlanmagan bo'lsa, javob berilmaydi
+                        break;
+                }
+            }
+
+
+
+
+
+            //EnglishCalculator
+            if (text.equals("Calculator")) {
+                // Faqat "Kalkulyator" tugmasi bosilganda javob beriladi
+                sendmessage(chatId, "Enter the length of your roof (eg 5.20):");
+                userStatesENG.put(chatId, BotState.ASK_LENGTH); // Holatni boshlash
+                return;
+            }
+
+            if (userStatesENG.containsKey(chatId)) {
+                BotState currentState = userStatesENG.get(chatId);
+
+                switch (currentState) {
+                    case ASK_LENGTH:
+                        try {
+                            double length = Double.parseDouble(text);
+                            userLengthENG.put(chatId, length); // Xonaning bo'yini saqlash
+                            sendmessage(chatId, "Now enter the width of your roof (eg 3.50):");
+                            userStatesENG.put(chatId, BotState.ASK_WIDTH);
+                        } catch (NumberFormatException e) {
+                            sendmessage(chatId, "Please enter a valid number!");
+                        }
+                        break;
+
+                    case ASK_WIDTH:
+                        try {
+                            double width = Double.parseDouble(text);
+                            double length = userLengthENG.getOrDefault(chatId, 0.0);
+                            double area = length * width;
+
+                            sendmessage(chatId, "Room area: " + area + " square meter.");
+                            userStatesENG.put(chatId, BotState.NONE); // Holatni tiklash
+                        } catch (NumberFormatException e) {
+                            sendmessage(chatId, "Please enter a valid number!");
+                        }
+                        break;
+
+                    default:
+                        // Holat aniqlanmagan bo'lsa, javob berilmaydi
+                        break;
+                }
+            }
+
+
+
+
 
 
 
