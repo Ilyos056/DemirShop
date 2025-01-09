@@ -939,10 +939,6 @@ public class MyBotService {
         row.add(button1);
 
 
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Kulonlar (AGRO)");
-        row.add(button2);
-
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button4 = new KeyboardButton();
         button4.setText("Стеновой профиль 50*40");
@@ -1055,13 +1051,6 @@ public class MyBotService {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("O‘zbekiston, Samarqand, Xishrav-2 massivi, “Urgut” erkin iqtisodiy zonasi");
-        return sendMessage;
-    }
-    public SendMessage Tiltanlash(Long chatId) {
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText("Версия чат-бота на русском языке – @DemirProfilBot");
-
         return sendMessage;
     }
     public SendVideo video(Long chatId) {

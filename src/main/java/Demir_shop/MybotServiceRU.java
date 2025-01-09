@@ -296,18 +296,18 @@ public class MybotServiceRU{
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
-    public SendPhoto profnastilinlineMasterru(Long chatId){
+    public SendPhoto profnastilinlineRU(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
-        sendPhoto.setCaption("");
+        sendPhoto.setCaption("Выбирать");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<InlineKeyboardButton> row = new ArrayList<>();
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("➖");
-        button.setCallbackData("-Id");
+        button.setCallbackData("-RUIdprofnastil");
         row.add(button);
         rowList.add(row);
 
@@ -319,21 +319,21 @@ public class MybotServiceRU{
 
         button=new InlineKeyboardButton();
         button.setText("➕");
-        button.setCallbackData("+Id");
+        button.setCallbackData("+RUIdprofnastil");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("Покупка");
-        button.setCallbackData("sotibolishRUId");
+        button.setCallbackData("sotibolishallRUId");
         row.add(button);
         rowList.add(row);
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
-        button.setText("⬅\uFE0FНазад");
-        button.setCallbackData("qaytishIdpRUrofnastil");
+        button.setText("Назад");
+        button.setCallbackData("qaytishIdprofnastilENG");
         row.add(button);
         rowList.add(row);
 
@@ -342,10 +342,12 @@ public class MybotServiceRU{
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         return sendPhoto;
     }
-    public SendPhoto profnastilinlineAtsinkovkaru(Long chatId){
+
+    int p;
+    public InlineKeyboardMarkup profnastilinlineMasterru(Long chatId){
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("\"C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg\""));
+        sendPhoto.setPhoto(new InputFile("https://st2.stpulscen.ru/images/product/417/231/054_original.jpg"));
         sendPhoto.setCaption("Выбирать");
 
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
@@ -353,26 +355,76 @@ public class MybotServiceRU{
         List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("➖");
-        button.setCallbackData("-Id");
+        button.setCallbackData("-RUIdprofnastil");
         row.add(button);
         rowList.add(row);
 
         button=new InlineKeyboardButton();
-        button.setText("1");
+        button.setText(String.valueOf(++p));
         button.setCallbackData("sonId");
         row.add(button);
 
 
         button=new InlineKeyboardButton();
         button.setText("➕");
-        button.setCallbackData("+Id");
+        button.setCallbackData("+RUIdprofnastil");
         row.add(button);
 
 
         row=new ArrayList<>();
         button=new InlineKeyboardButton();
         button.setText("Покупка");
-        button.setCallbackData("sotibolishRUId");
+        button.setCallbackData("sotibolishallRUId");
+        row.add(button);
+        rowList.add(row);
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Назад");
+        button.setCallbackData("qaytishIdpRUrofnastil");
+        row.add(button);
+        rowList.add(row);
+
+
+        inlineKeyboardMarkup.setKeyboard(rowList);
+        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
+        return inlineKeyboardMarkup;
+    }
+    public InlineKeyboardMarkup profnastilinlineAtsinkovkaru(Long chatId){
+
+        if (p>1){
+            --p;
+        }
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("C:\\Users\\user\\Downloads\\Telegram Desktop\\photo_2024-12-15_21-56-31.jpg"));
+        sendPhoto.setCaption("Выбирать");
+
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        List<List<InlineKeyboardButton>> rowList = new ArrayList<>();
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("➖");
+        button.setCallbackData("-RUIdprofnastil");
+        row.add(button);
+        rowList.add(row);
+
+        button=new InlineKeyboardButton();
+        button.setText(String.valueOf(p));
+        button.setCallbackData("sonId");
+        row.add(button);
+
+
+        button=new InlineKeyboardButton();
+        button.setText("➕");
+        button.setCallbackData("+RUIdprofnastil");
+        row.add(button);
+
+
+        row=new ArrayList<>();
+        button=new InlineKeyboardButton();
+        button.setText("Покупка");
+        button.setCallbackData("sotibolishallRUId");
         row.add(button);
         rowList.add(row);
 
@@ -386,7 +438,7 @@ public class MybotServiceRU{
 
         inlineKeyboardMarkup.setKeyboard(rowList);
         sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
-        return sendPhoto;
+        return inlineKeyboardMarkup;
     }
 
 
@@ -688,10 +740,6 @@ public class MybotServiceRU{
         row.add(button1);
 
 
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Подвески (АГРО)");
-        row.add(button2);
-
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button4 = new KeyboardButton();
         button4.setText("Стеновой  профиль 50*40");
@@ -786,12 +834,14 @@ public class MybotServiceRU{
 
         return sendMessage;
     }
-    public  SendDocument Photodoc(Long chatId){
+    public  SendDocument PhotodocRU(Long chatId){
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
         sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
         return sendDocument;
     }
+
+
 
     public SendLocation location(Long chatId) {
         SendLocation sendLocation = new SendLocation();

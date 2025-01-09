@@ -639,7 +639,7 @@ public class MyBotServiceENG {
 
 
         KeyboardButton button5 = new KeyboardButton();
-        button5.setText("Video\uD83D\uDCF9");
+        button5.setText("video\uD83D\uDCF9");
         row1.add(button5);
 
 
@@ -692,11 +692,6 @@ public class MyBotServiceENG {
         KeyboardButton button1 = new KeyboardButton();
         button1.setText("Guides profile");
         row.add(button1);
-
-
-        KeyboardButton button2 = new KeyboardButton();
-        button2.setText("Pendants (AGRO)");
-        row.add(button2);
 
         KeyboardRow row2 = new KeyboardRow();
         KeyboardButton button4 = new KeyboardButton();
@@ -779,7 +774,7 @@ public class MyBotServiceENG {
 
         return sendMessage;
     }
-    public  SendDocument Photodoc(Long chatId){
+    public  SendDocument PhotodocENG(Long chatId){
         SendDocument sendDocument = new SendDocument();
         sendDocument.setChatId(chatId);
         sendDocument.setDocument(new InputFile(new File("C:\\Users\\hp\\Documents\\Настраиваемые шаблоны Office\\Products.pdf")));
